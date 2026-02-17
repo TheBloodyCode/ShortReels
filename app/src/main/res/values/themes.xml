@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.ShortReels" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/accent_primary</item>
+        <item name="colorPrimaryVariant">@color/accent_purple</item>
+        <item name="colorOnPrimary">@color/text_primary</item>
+        <item name="colorSecondary">@color/accent_secondary</item>
+        <item name="colorOnSecondary">@color/text_primary</item>
+        <item name="colorSurface">@color/bg_card</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="android:colorBackground">@color/bg_primary</item>
+        <item name="colorOnBackground">@color/text_primary</item>
+        <item name="colorError">@color/error</item>
+        <item name="android:windowBackground">@color/bg_primary</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/bg_primary</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
+        <item name="bottomSheetDialogTheme">@style/Theme.ShortReels.BottomSheet</item>
+        <item name="materialAlertDialogTheme">@style/Theme.ShortReels.Dialog</item>
+        <item name="android:fontFamily">@font/outfit_regular</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.ShortReels.Large</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.ShortReels.Medium</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.ShortReels.Small</item>
+    </style>
+
+    <style name="Theme.ShortReels.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/bg_primary</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo</item>
+        <item name="windowSplashScreenAnimationDuration">1000</item>
+        <item name="postSplashScreenTheme">@style/Theme.ShortReels</item>
+    </style>
+
+    <style name="Theme.ShortReels.Player" parent="Theme.ShortReels">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/bg_primary</item>
+    </style>
+
+    <style name="Theme.ShortReels.BottomSheet" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/Widget.ShortReels.BottomSheet</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="colorSurface">@color/bg_secondary</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+    </style>
+
+    <style name="Widget.ShortReels.BottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearance">@style/ShapeAppearance.ShortReels.BottomSheet</item>
+        <item name="backgroundTint">@color/bg_secondary</item>
+    </style>
+
+    <style name="ShapeAppearance.ShortReels.BottomSheet" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">24dp</item>
+        <item name="cornerSizeTopRight">24dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <style name="Theme.ShortReels.Dialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorSurface">@color/bg_card</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorPrimary">@color/accent_primary</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.ShortReels.Medium</item>
+    </style>
+
+    <style name="ShapeAppearance.ShortReels.Large" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
+
+    <style name="ShapeAppearance.ShortReels.Medium" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="ShapeAppearance.ShortReels.Small" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <!-- Text styles -->
+    <style name="TextStyle.ShortReels.Display" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:fontFamily">@font/bebas_neue</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="TextStyle.ShortReels.Headline" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:fontFamily">@font/outfit_bold</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <style name="TextStyle.ShortReels.Body" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:fontFamily">@font/outfit_regular</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="TextStyle.ShortReels.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:fontFamily">@font/outfit_regular</item>
+        <item name="android:textColor">@color/text_muted</item>
+    </style>
+
+    <!-- Button styles -->
+    <style name="Widget.ShortReels.Button.Primary" parent="Widget.MaterialComponents.Button">
+        <item name="android:background">@drawable/btn_primary_bg</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">@font/outfit_semibold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="rippleColor">@color/scrim</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="Widget.ShortReels.Button.Secondary" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">@color/accent_primary</item>
+        <item name="strokeColor">@color/accent_primary</item>
+        <item name="strokeWidth">1.5dp</item>
+        <item name="android:fontFamily">@font/outfit_semibold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="rippleColor">@color/border_subtle</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="Widget.ShortReels.Button.Ghost" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:fontFamily">@font/outfit_medium</item>
+        <item name="rippleColor">@color/border_subtle</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <!-- Tab layout -->
+    <style name="Widget.ShortReels.TabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabTextColor">@color/tab_unselected</item>
+        <item name="tabSelectedTextColor">@color/tab_selected</item>
+        <item name="tabIndicatorColor">@color/accent_primary</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabBackground">@android:color/transparent</item>
+        <item name="tabTextAppearance">@style/TextStyle.ShortReels.TabText</item>
+    </style>
+
+    <style name="TextStyle.ShortReels.TabText" parent="TextAppearance.Design.Tab">
+        <item name="android:fontFamily">@font/outfit_semibold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <!-- Input fields -->
+    <style name="Widget.ShortReels.TextInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/bg_card</item>
+        <item name="boxStrokeColor">@color/border_subtle</item>
+        <item name="boxStrokeColor">@color/text_input_stroke</item>
+        <item name="hintTextColor">@color/text_muted</item>
+        <item name="android:textColorHint">@color/text_muted</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+    </style>
+
+    <!-- Misc -->
+    <style name="Widget.ShortReels.BottomNavIndicator" parent="">
+        <item name="android:background">@drawable/btn_primary_bg</item>
+    </style>
+
+    <!-- Compatibility Aliases -->
+    <style name="Button.ShortReels.Primary" parent="Widget.ShortReels.Button.Primary" />
+    <style name="Button.ShortReels.Secondary" parent="Widget.ShortReels.Button.Secondary" />
+    <style name="Button.ShortReels.Ghost" parent="Widget.ShortReels.Button.Ghost" />
+    <style name="Widget.ShortReels.TextInputLayout" parent="Widget.ShortReels.TextInput" />
+
+</resources>
+<!-- Add this at end of resources -->

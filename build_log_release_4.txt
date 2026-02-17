@@ -1,0 +1,80 @@
+Configuration on demand is an incubating feature.
+
+> Configure project :app
+WARNING: The option setting 'android.defaults.buildfeatures.buildconfig=true' is deprecated.
+The current default is 'false'.
+It will be removed in version 9.0 of the Android Gradle plugin.
+You can resolve this warning in Android Studio via `Refactor` > `Migrate BuildConfig to Gradle Build Files`
+
+> Task :app:buildKotlinToolingMetadata UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :app:dataBindingMergeDependencyArtifactsRelease UP-TO-DATE
+> Task :app:generateReleaseResValues UP-TO-DATE
+> Task :app:generateReleaseResources UP-TO-DATE
+> Task :app:mergeReleaseResources UP-TO-DATE
+> Task :app:packageReleaseResources UP-TO-DATE
+> Task :app:parseReleaseLocalResources UP-TO-DATE
+> Task :app:dataBindingGenBaseClassesRelease UP-TO-DATE
+> Task :app:generateReleaseBuildConfig UP-TO-DATE
+> Task :app:generateSafeArgsRelease UP-TO-DATE
+> Task :app:checkReleaseAarMetadata UP-TO-DATE
+> Task :app:mapReleaseSourceSetPaths UP-TO-DATE
+> Task :app:createReleaseCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksRelease UP-TO-DATE
+> Task :app:processReleaseMainManifest UP-TO-DATE
+> Task :app:processReleaseManifest UP-TO-DATE
+> Task :app:processReleaseManifestForPackage UP-TO-DATE
+> Task :app:javaPreCompileRelease UP-TO-DATE
+> Task :app:extractProguardFiles UP-TO-DATE
+> Task :app:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :app:mergeReleaseNativeLibs NO-SOURCE
+> Task :app:stripReleaseDebugSymbols NO-SOURCE
+> Task :app:extractReleaseNativeSymbolTables NO-SOURCE
+> Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:checkReleaseDuplicateClasses UP-TO-DATE
+> Task :app:mergeReleaseArtProfile UP-TO-DATE
+> Task :app:mergeReleaseShaders UP-TO-DATE
+> Task :app:compileReleaseShaders NO-SOURCE
+> Task :app:generateReleaseAssets UP-TO-DATE
+> Task :app:mergeReleaseAssets UP-TO-DATE
+> Task :app:compressReleaseAssets UP-TO-DATE
+> Task :app:collectReleaseDependencies UP-TO-DATE
+> Task :app:sdkReleaseDependencyData UP-TO-DATE
+> Task :app:validateSigningRelease UP-TO-DATE
+> Task :app:writeReleaseAppMetadata UP-TO-DATE
+> Task :app:writeReleaseSigningConfigVersions UP-TO-DATE
+> Task :app:processReleaseResources FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:processReleaseResources'.
+> A failure occurred while executing com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction
+   > Android resource linking failed
+     com.shortreels.app-mergeReleaseResources-86:/layout/activity_main.xml:31: error: resource style/Widget.ShortReels.BottomNavIndicator (aka com.shortreels:style/Widget.ShortReels.BottomNavIndicator) not found.
+     com.shortreels.app-mergeReleaseResources-86:/layout/fragment_feed.xml:93: error: resource drawable/ic_empty_feed (aka com.shortreels:drawable/ic_empty_feed) not found.
+     com.shortreels.app-mergeReleaseResources-86:/layout/fragment_login.xml:34: error: resource string/app_tagline (aka com.shortreels:string/app_tagline) not found.
+     com.shortreels.app-mergeReleaseResources-86:/layout/fragment_login.xml:44: error: resource string/login_title (aka com.shortreels:string/login_title) not found.
+     com.shortreels.app-mergeReleaseResources-86:/layout/fragment_login.xml:52: error: resource string/login_subtitle (aka com.shortreels:string/login_subtitle) not found.
+     com.shortreels.app-mergeReleaseResources-86:/layout/fragment_login.xml:61: error: resource string/hint_email (aka com.shortreels:string/hint_email) not found.
+     com.shortreels.app-mergeReleaseResources-86:/layout/fragment_login.xml:61: error: resource style/Widget.ShortReels.TextInput (aka com.shortreels:style/Widget.ShortReels.TextInput) not found.
+     com.shortreels.app-mergeReleaseResources-86:/layout/fragment_login.xml:82: error: resource string/hint_password (aka com.shortreels:string/hint_password) not found.
+     com.shortreels.app-mergeReleaseResources-86:/layout/fragment_login.xml:82: error: resource style/Widget.ShortReels.TextInput (aka com.shortreels:style/Widget.ShortReels.TextInput) not found.
+     com.shortreels.app-mergeReleaseResources-86:/layout/fragment_login.xml:102: error: resource string/btn_forgot_password (aka com.shortreels:string/btn_forgot_password) not found.
+     com.shortreels.app-mergeReleaseResources-86:/layout/fragment_login.xml:113: error: resource style/Widget.ShortReels.Button.Primary (aka com.shortreels:style/Widget.ShortReels.Button.Primary) not found.
+     com.shortreels.app-mergeReleaseResources-86:/layout/fragment_login.xml:113: error: resource string/btn_login (aka com.shortreels:string/btn_login) not found.
+     com.shortreels.app-mergeReleaseResources-86:/layout/fragment_login.xml:151: error: resource string/btn_google_login (aka com.shortreels:string/btn_google_login) not found.
+     com.shortreels.app-mergeReleaseResources-86:/layout/fragment_login.xml:161: error: resource string/tv_no_account (aka com.shortreels:string/tv_no_account) not found.
+     error: failed linking file resources.
+
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 1s
+31 actionable tasks: 2 executed, 29 up-to-date

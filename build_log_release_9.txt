@@ -1,0 +1,459 @@
+Configuration on demand is an incubating feature.
+
+> Configure project :app
+WARNING: The option setting 'android.defaults.buildfeatures.buildconfig=true' is deprecated.
+The current default is 'false'.
+It will be removed in version 9.0 of the Android Gradle plugin.
+You can resolve this warning in Android Studio via `Refactor` > `Migrate BuildConfig to Gradle Build Files`
+
+> Task :app:buildKotlinToolingMetadata UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :app:dataBindingMergeDependencyArtifactsRelease UP-TO-DATE
+> Task :app:generateReleaseResValues UP-TO-DATE
+> Task :app:generateReleaseResources UP-TO-DATE
+> Task :app:mergeReleaseResources UP-TO-DATE
+> Task :app:packageReleaseResources UP-TO-DATE
+> Task :app:parseReleaseLocalResources UP-TO-DATE
+> Task :app:dataBindingGenBaseClassesRelease UP-TO-DATE
+> Task :app:generateReleaseBuildConfig UP-TO-DATE
+> Task :app:generateSafeArgsRelease UP-TO-DATE
+> Task :app:checkReleaseAarMetadata UP-TO-DATE
+> Task :app:mapReleaseSourceSetPaths UP-TO-DATE
+> Task :app:createReleaseCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksRelease UP-TO-DATE
+> Task :app:processReleaseMainManifest UP-TO-DATE
+> Task :app:processReleaseManifest UP-TO-DATE
+> Task :app:processReleaseManifestForPackage UP-TO-DATE
+> Task :app:processReleaseResources UP-TO-DATE
+> Task :app:kaptGenerateStubsReleaseKotlin UP-TO-DATE
+> Task :app:kaptReleaseKotlin UP-TO-DATE
+> Task :app:javaPreCompileRelease UP-TO-DATE
+> Task :app:extractProguardFiles UP-TO-DATE
+> Task :app:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :app:mergeReleaseNativeLibs NO-SOURCE
+> Task :app:stripReleaseDebugSymbols NO-SOURCE
+> Task :app:extractReleaseNativeSymbolTables NO-SOURCE
+> Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:checkReleaseDuplicateClasses UP-TO-DATE
+> Task :app:mergeReleaseArtProfile UP-TO-DATE
+> Task :app:mergeReleaseShaders UP-TO-DATE
+> Task :app:compileReleaseShaders NO-SOURCE
+> Task :app:generateReleaseAssets UP-TO-DATE
+> Task :app:mergeReleaseAssets UP-TO-DATE
+> Task :app:compressReleaseAssets UP-TO-DATE
+> Task :app:optimizeReleaseResources UP-TO-DATE
+> Task :app:collectReleaseDependencies UP-TO-DATE
+> Task :app:sdkReleaseDependencyData UP-TO-DATE
+> Task :app:validateSigningRelease UP-TO-DATE
+> Task :app:writeReleaseAppMetadata UP-TO-DATE
+> Task :app:writeReleaseSigningConfigVersions UP-TO-DATE
+
+> Task :app:compileReleaseKotlin FAILED
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/build/generated/source/navigation-args/release/com/shortreels/ui/player/PlayerFragmentArgs.kt:10:19 Redeclaration: PlayerFragmentArgs
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/local/dao/Daos.kt:25:11 Redeclaration: VideoDao
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/local/dao/Daos.kt:126:11 Redeclaration: UserDao
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/local/dao/Daos.kt:169:11 Redeclaration: WatchHistoryDao
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/local/dao/Daos.kt:192:11 Redeclaration: DownloadDao
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/local/dao/Daos.kt:218:11 Redeclaration: SearchHistoryDao
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/local/dao/DownloadDao.kt:8:11 Redeclaration: DownloadDao
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/local/dao/SearchHistoryDao.kt:8:11 Redeclaration: SearchHistoryDao
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/local/dao/UserDao.kt:8:11 Redeclaration: UserDao
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/local/dao/VideoDao.kt:8:11 Redeclaration: VideoDao
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/local/dao/WatchHistoryDao.kt:8:11 Redeclaration: WatchHistoryDao
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Managers.kt:6:17 Unresolved reference: security
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Managers.kt:7:17 Unresolved reference: security
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Managers.kt:17:29 Unresolved reference: MasterKey
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Managers.kt:18:23 Unresolved reference: MasterKey
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Managers.kt:21:44 Unresolved reference: EncryptedSharedPreferences
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Managers.kt:25:9 Unresolved reference: EncryptedSharedPreferences
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Managers.kt:26:9 Unresolved reference: EncryptedSharedPreferences
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/PipedMappers.kt:42:23 Type mismatch: inferred type is String? but String was expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/PipedMappers.kt:54:30 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type String?
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/PipedMappers.kt:55:25 Type mismatch: inferred type is String? but String was expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/PipedMappers.kt:56:28 Type mismatch: inferred type is String? but String was expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/PipedMappers.kt:62:21 Type mismatch: inferred type is Long but String was expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:23:7 Redeclaration: VideoRepository
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:33:75 Overload resolution ambiguity: 
+public fun VideoEntity.toDomain(): com.shortreels.data.models.Video defined in com.shortreels.data.repository in file VideoRepository.kt
+public fun VideoEntity.toDomain(): com.shortreels.domain.model.Video defined in com.shortreels.data.repository in file Repositories.kt
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:71:53 Overload resolution ambiguity: 
+public fun VideoEntity.toDomain(): com.shortreels.data.models.Video defined in com.shortreels.data.repository in file VideoRepository.kt
+public fun VideoEntity.toDomain(): com.shortreels.domain.model.Video defined in com.shortreels.data.repository in file Repositories.kt
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:134:9 Type mismatch: inferred type is Flow<List<Unit>> but Flow<List<Video>> was expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:134:54 Type mismatch: inferred type is Unit but Video was expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:134:68 Overload resolution ambiguity: 
+public fun VideoEntity.toDomain(): com.shortreels.data.models.Video defined in com.shortreels.data.repository in file VideoRepository.kt
+public fun VideoEntity.toDomain(): com.shortreels.domain.model.Video defined in com.shortreels.data.repository in file Repositories.kt
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:137:9 Type mismatch: inferred type is List<Unit> but List<Video> was expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:137:42 Type mismatch: inferred type is Unit but Video was expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:137:47 Overload resolution ambiguity: 
+public fun VideoEntity.toDomain(): com.shortreels.data.models.Video defined in com.shortreels.data.repository in file VideoRepository.kt
+public fun VideoEntity.toDomain(): com.shortreels.domain.model.Video defined in com.shortreels.data.repository in file Repositories.kt
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:293:55 Cannot find a parameter with this name: hlsUrl
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:294:45 Cannot find a parameter with this name: season
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:295:75 Type mismatch: inferred type is List<String> but String was expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:298:5 Cannot find a parameter with this name: authorIsVerified
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:300:32 Cannot find a parameter with this name: bookmarkCount
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:302:5 Cannot find a parameter with this name: coinsRequired
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:302:49 Cannot find a parameter with this name: unlockType
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:303:17 Type mismatch: inferred type is Long but String was expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:303:28 Cannot find a parameter with this name: updatedAt
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:304:24 Cannot find a parameter with this name: isBookmarked
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:304:24 No value passed for parameter 'isSaved'
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:304:24 No value passed for parameter 'authorVerified'
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:324:1 Conflicting overloads: public fun VideoEntity.toDomain(): com.shortreels.domain.model.Video defined in com.shortreels.data.repository in file Repositories.kt, public fun VideoEntity.toDomain(): com.shortreels.data.models.Video defined in com.shortreels.data.repository in file VideoRepository.kt
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:326:64 Unresolved reference: hlsUrl
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:327:54 Unresolved reference: season
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:330:12 Type mismatch: inferred type is String but List<String> was expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:332:37 Unresolved reference: authorIsVerified
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:333:72 Unresolved reference: bookmarkCount
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:334:54 Unresolved reference: coinsRequired
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:335:47 Unresolved reference: unlockType
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:336:17 Type mismatch: inferred type is String but Long was expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:336:40 Unresolved reference: updatedAt
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:337:39 Unresolved reference: isBookmarked
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:338:21 Unresolved reference: watchProgress
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:343:34 Cannot find a parameter with this name: bannerUrl
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:343:79 Type mismatch: inferred type is List<String> but String was expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:344:36 Cannot find a parameter with this name: authorId
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:344:58 Cannot find a parameter with this name: authorUsername
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:345:5 Cannot find a parameter with this name: authorDisplayName
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:345:45 Cannot find a parameter with this name: authorAvatarUrl
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:346:14 Type mismatch: inferred type is Float but String was expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:346:22 Cannot find a parameter with this name: reviewCount
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:347:41 Cannot find a parameter with this name: status
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:348:5 Cannot find a parameter with this name: releaseSchedule
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:348:52 Type mismatch: inferred type is Long but String was expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:348:63 No value passed for parameter 'coverUrl'
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:348:63 No value passed for parameter 'year'
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:366:46 Unresolved reference: bannerUrl
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:368:12 Type mismatch: inferred type is String but List<String> was expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:369:21 Unresolved reference: authorId
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:369:31 Unresolved reference: authorUsername
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:369:47 Unresolved reference: authorDisplayName
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:369:66 Unresolved reference: authorAvatarUrl
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:371:14 Type mismatch: inferred type is String but Float was expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:371:36 Unresolved reference: reviewCount
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:373:54 Unresolved reference: status
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:374:23 Unresolved reference: releaseSchedule
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:374:52 Type mismatch: inferred type is String but Long was expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:390:5 Cannot find a parameter with this name: isVerified
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:390:30 Cannot find a parameter with this name: subscriptionPlan
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:391:5 Cannot find a parameter with this name: coins
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:391:20 No value passed for parameter 'verified'
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:391:20 No value passed for parameter 'videoCount'
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:391:20 No value passed for parameter 'likeCount'
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:391:20 No value passed for parameter 'isPremium'
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:391:20 No value passed for parameter 'coinBalance'
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:391:32 Type mismatch: inferred type is Long but String was expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:398:18 Unresolved reference: isVerified
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:399:68 Unresolved reference: subscriptionPlan
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:400:13 Unresolved reference: coins
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/Repositories.kt:400:32 Type mismatch: inferred type is String but Long was expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/VideoRepository.kt:16:7 Redeclaration: VideoRepository
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/VideoRepository.kt:92:22 Unresolved reference: updateSaveStatus
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/VideoRepository.kt:103:22 Unresolved reference: updateSaveStatus
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/VideoRepository.kt:113:29 Unresolved reference: insertOrUpdate
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/VideoRepository.kt:125:77 Unresolved reference: getAllHistory
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/data/repository/VideoRepository.kt:160:1 Conflicting overloads: public fun VideoEntity.toDomain(): com.shortreels.domain.model.Video defined in com.shortreels.data.repository in file Repositories.kt, public fun VideoEntity.toDomain(): com.shortreels.data.models.Video defined in com.shortreels.data.repository in file VideoRepository.kt
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:46:13 Unresolved reference: btnLike
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:50:13 Unresolved reference: btnLike
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:55:17 Unresolved reference: tvReplies
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:55:27 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:56:17 Unresolved reference: tvReplies
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:56:27 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:58:17 Unresolved reference: tvReplies
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:58:27 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:88:79 Unresolved reference: ivThumbnail
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:90:13 Unresolved reference: tvTitle
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:90:21 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:91:13 Unresolved reference: tvGenre
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:91:21 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:92:13 Unresolved reference: tvEpisodes
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:92:24 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:93:13 Unresolved reference: tvRating
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:93:22 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:95:13 Unresolved reference: badgePremium
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:95:26 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:96:13 Unresolved reference: badgeNew
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:96:22 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:127:13 Unresolved reference: tvEpisodeTitle
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:127:28 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:175:36 Unresolved reference: ivThumbnail
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:177:13 Unresolved reference: tvTitle
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:177:21 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:178:13 Unresolved reference: tvSeries
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:178:22 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:179:13 Unresolved reference: tvViews
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:179:21 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:180:13 Unresolved reference: tvGenre
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/Adapters.kt:180:21 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:116:13 Unresolved reference: tvSeriesTitle
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:116:27 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:118:13 Unresolved reference: tvVideoTitle
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:118:26 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:122:13 Unresolved reference: tvAuthorName
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:122:26 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:128:23 Unresolved reference: ivAuthorAvatar
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:140:13 Unresolved reference: badgePremium
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:140:26 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:145:17 Unresolved reference: tvCoinsRequired
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:145:33 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:152:13 Unresolved reference: progressBar
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:152:25 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:180:13 Unresolved reference: btnBookmark
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:193:13 Unresolved reference: ivAuthorAvatar
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:194:13 Unresolved reference: tvAuthorName
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:197:13 Unresolved reference: tvSeriesTitle
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:200:13 Unresolved reference: btnMute
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:203:13 Unresolved reference: btnUnlock
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:250:21 Unresolved reference: btnPlayPause
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:257:21 Unresolved reference: btnPlayPause
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:277:33 Unresolved reference: progressBar
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:277:45 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:278:33 Unresolved reference: tvCurrentTime
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:278:47 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:279:33 Unresolved reference: tvTotalTime
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:279:45 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:287:37 Unresolved reference: controlsOverlay
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:288:21 Unresolved reference: controlsOverlay
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:288:37 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:293:29 Unresolved reference: controlsOverlay
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:293:45 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:302:25 Unresolved reference: btnMute
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:309:29 Unresolved reference: setImageResource
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:313:64 Unresolved reference: accent_pink
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:314:56 Unresolved reference: white
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:319:21 Unresolved reference: btnBookmark
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:362:55 Unresolved reference: loadingSpinner
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:362:70 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:364:33 Unresolved reference: loadingSpinner
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:364:48 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/adapters/FeedAdapter.kt:375:25 Unresolved reference: btnPlayPause
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/MainActivity.kt:57:17 Unresolved reference: bottomNav
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/MainActivity.kt:64:22 Unresolved reference: libraryFragment
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/MainActivity.kt:68:21 Unresolved reference: bottomNav
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/MainActivity.kt:68:31 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:70:47 Unresolved reference: action_login_to_register
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:168:9 Unresolved reference: btnBack
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:170:9 Unresolved reference: btnRegister
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:171:28 Unresolved reference: etUsername
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:172:25 Unresolved reference: etEmail
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:173:28 Unresolved reference: etPassword
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:174:35 Unresolved reference: etConfirmPassword
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:177:40 Unresolved reference: tilUsername
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:177:52 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:178:42 Unresolved reference: tilEmail
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:178:51 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:179:48 Unresolved reference: tilPassword
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:179:60 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:180:48 Unresolved reference: tilConfirmPassword
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:180:67 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:184:9 Unresolved reference: tvLogin
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:192:33 Unresolved reference: progressBar
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:192:45 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:193:33 Unresolved reference: btnRegister
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:193:45 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:200:33 Unresolved reference: progressBar
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:200:45 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:201:33 Unresolved reference: btnRegister
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:201:45 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:205:33 Unresolved reference: progressBar
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:205:45 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:206:33 Unresolved reference: btnRegister
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/auth/AuthFragments.kt:206:45 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/explore/ExploreFragment.kt:52:17 Unresolved reference: btnClear
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/explore/ExploreFragment.kt:52:26 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/explore/ExploreFragment.kt:58:9 Unresolved reference: btnClear
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/explore/ExploreFragment.kt:74:17 Unresolved reference: rvSeries
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/explore/ExploreFragment.kt:75:13 Unresolved reference: adapter
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/explore/ExploreFragment.kt:76:13 Unresolved reference: layoutManager
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/explore/ExploreFragment.kt:83:17 Unresolved reference: rvSearchResults
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/explore/ExploreFragment.kt:84:13 Unresolved reference: adapter
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/explore/ExploreFragment.kt:85:13 Unresolved reference: layoutManager
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/explore/ExploreFragment.kt:93:57 Unresolved reference: shimmerTrending
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/explore/ExploreFragment.kt:95:33 Unresolved reference: shimmerTrending
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/explore/ExploreFragment.kt:96:33 Unresolved reference: shimmerTrending
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/explore/ExploreFragment.kt:96:49 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/explore/ExploreFragment.kt:100:33 Unresolved reference: shimmerTrending
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/explore/ExploreFragment.kt:123:33 Unresolved reference: searchProgressBar
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/explore/ExploreFragment.kt:123:51 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/explore/ExploreFragment.kt:127:33 Unresolved reference: searchProgressBar
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/explore/ExploreFragment.kt:127:51 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/explore/ExploreFragment.kt:130:37 Unresolved reference: rvSearchResults
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/explore/ExploreFragment.kt:130:53 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/explore/ExploreFragment.kt:133:37 Unresolved reference: rvSearchResults
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/explore/ExploreFragment.kt:133:53 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/explore/ExploreFragment.kt:138:33 Unresolved reference: searchProgressBar
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/explore/ExploreFragment.kt:138:51 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/feed/CommentsBottomSheet.kt:77:9 Unresolved reference: btnClose
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/feed/FeedFragment.kt:85:81 Unresolved reference: genreChipGroup
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/feed/FeedFragment.kt:89:25 Unresolved reference: genreChipGroup
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/feed/FeedFragment.kt:92:21 Unresolved reference: genreChipGroup
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/feed/FeedFragment.kt:115:25 Unresolved reference: swipeRefresh
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/feed/FeedFragment.kt:115:38 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/feed/FeedFragment.kt:119:17 Unresolved reference: swipeRefresh
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/feed/FeedFragment.kt:125:17 Unresolved reference: shimmerLayout
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/feed/FeedFragment.kt:125:31 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/feed/FeedFragment.kt:126:17 Unresolved reference: shimmerLayout
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/feed/FeedFragment.kt:131:17 Unresolved reference: shimmerLayout
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/feed/FeedFragment.kt:132:17 Unresolved reference: shimmerLayout
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/feed/FeedFragment.kt:132:31 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/feed/FeedFragment.kt:137:17 Unresolved reference: errorLayout
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/feed/FeedFragment.kt:137:29 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/feed/FeedFragment.kt:138:17 Unresolved reference: tvError
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/feed/FeedFragment.kt:138:25 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/feed/FeedFragment.kt:139:17 Unresolved reference: btnRetry
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/library/LibraryFragment.kt:33:17 Unresolved reference: tabLayout
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/library/LibraryFragment.kt:33:42 Unresolved reference: tabLayout
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/library/LibraryFragment.kt:34:17 Unresolved reference: tabLayout
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/library/LibraryFragment.kt:34:42 Unresolved reference: tabLayout
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/library/LibraryFragment.kt:35:17 Unresolved reference: tabLayout
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/library/LibraryFragment.kt:35:42 Unresolved reference: tabLayout
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/library/LibraryFragment.kt:36:17 Unresolved reference: tabLayout
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/library/LibraryFragment.kt:36:42 Unresolved reference: tabLayout
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:31:13 Unresolved reference: btnBack
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:34:13 Unresolved reference: cardWeekly
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:35:13 Unresolved reference: cardMonthly
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:36:13 Unresolved reference: cardAnnual
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:41:13 Unresolved reference: btnSubscribe
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:45:13 Unresolved reference: btnRestore
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:49:13 Unresolved reference: tvTerms
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:53:13 Unresolved reference: tvPrivacy
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:61:16 Unresolved reference: cardWeekly
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:61:28 Unresolved reference: cardMonthly
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:61:41 Unresolved reference: cardAnnual
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:61:53 Overload resolution ambiguity: 
+public inline fun <T> Iterable<TypeVariable(T)>.forEach(action: (TypeVariable(T)) -> Unit): Unit defined in kotlin.collections
+public inline fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.forEach(action: (Map.Entry<TypeVariable(K), TypeVariable(V)>) -> Unit): Unit defined in kotlin.collections
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:62:13 Unresolved reference: it
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:62:16 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:64:9 Unresolved reference: badgeBestValue
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:64:24 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:68:17 Unresolved reference: cardWeekly
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:68:28 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:69:17 Unresolved reference: tvSelectedPrice
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:69:33 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:72:17 Unresolved reference: cardMonthly
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:72:29 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:73:17 Unresolved reference: tvSelectedPrice
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:73:33 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:76:17 Unresolved reference: cardAnnual
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:76:28 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:77:17 Unresolved reference: tvSelectedPrice
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:77:33 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:78:17 Unresolved reference: badgeBestValue
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/premium/PremiumFragment.kt:78:32 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/profile/ProfileFragment.kt:41:47 Unresolved reference: action_profile_to_settings
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/profile/ProfileFragment.kt:44:9 Unresolved reference: btnNotifications
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/profile/ProfileFragment.kt:52:9 Unresolved reference: btnPremium
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/profile/ProfileFragment.kt:61:9 Unresolved reference: tabLayout
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/profile/ProfileFragment.kt:102:13 Unresolved reference: btnBack
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/profile/ProfileFragment.kt:103:13 Unresolved reference: switchAutoplay
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/profile/ProfileFragment.kt:103:28 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/profile/ProfileFragment.kt:104:13 Unresolved reference: switchDataSaver
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/profile/ProfileFragment.kt:104:29 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/profile/ProfileFragment.kt:106:13 Unresolved reference: switchAutoplay
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/profile/ProfileFragment.kt:106:57 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/profile/ProfileFragment.kt:106:60 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/profile/ProfileFragment.kt:110:13 Unresolved reference: btnLogout
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/series/SeriesDetailFragment.kt:42:9 Unresolved reference: btnBack
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/series/SeriesDetailFragment.kt:44:9 Unresolved reference: btnFollow
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/series/SeriesDetailFragment.kt:49:26 Unresolved reference: SeriesDetailFragmentDirections
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/series/SeriesDetailFragment.kt:51:33 Overload resolution ambiguity: 
+public open fun navigate(deepLink: Uri): Unit defined in androidx.navigation.NavController
+public open fun navigate(request: NavDeepLinkRequest): Unit defined in androidx.navigation.NavController
+public open fun navigate(directions: NavDirections): Unit defined in androidx.navigation.NavController
+public open fun navigate(resId: Int): Unit defined in androidx.navigation.NavController
+public final fun navigate(route: String, navOptions: NavOptions? = ..., navigatorExtras: Navigator.Extras? = ...): Unit defined in androidx.navigation.NavController
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/series/SeriesDetailFragment.kt:54:9 Unresolved reference: rvEpisodes
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/series/SeriesDetailFragment.kt:55:13 Unresolved reference: adapter
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/series/SeriesDetailFragment.kt:56:13 Unresolved reference: layoutManager
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/splash/SplashActivity.kt:10:35 Unresolved reference: ActivitySplashBinding
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/upload/UploadFragment.kt:35:21 Unresolved reference: ivVideoPreview
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/upload/UploadFragment.kt:36:21 Unresolved reference: tvVideoName
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/upload/UploadFragment.kt:36:33 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/upload/UploadFragment.kt:37:21 Unresolved reference: btnUpload
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/upload/UploadFragment.kt:37:31 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/upload/UploadFragment.kt:59:9 Unresolved reference: btnClose
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/upload/UploadFragment.kt:61:9 Unresolved reference: btnSelectVideo
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/upload/UploadFragment.kt:62:9 Unresolved reference: ivVideoPreview
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/upload/UploadFragment.kt:64:9 Unresolved reference: btnUpload
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/upload/UploadFragment.kt:64:19 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/upload/UploadFragment.kt:65:9 Unresolved reference: btnUpload
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/upload/UploadFragment.kt:68:9 Unresolved reference: etTitle
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/upload/UploadFragment.kt:68:54 Unresolved reference: it
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/upload/UploadFragment.kt:68:76 Unresolved reference: tvTitleCount
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/upload/UploadFragment.kt:69:9 Unresolved reference: etDescription
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/upload/UploadFragment.kt:69:60 Unresolved reference: it
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/upload/UploadFragment.kt:69:82 Unresolved reference: tvDescCount
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/upload/UploadFragment.kt:96:29 Unresolved reference: etTitle
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/upload/UploadFragment.kt:97:35 Unresolved reference: etDescription
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/upload/UploadFragment.kt:100:21 Unresolved reference: tilTitle
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/upload/UploadFragment.kt:100:30 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/upload/UploadFragment.kt:105:17 Unresolved reference: uploadProgressGroup
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/upload/UploadFragment.kt:105:37 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/upload/UploadFragment.kt:106:17 Unresolved reference: btnUpload
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/presentation/ui/upload/UploadFragment.kt:106:27 Variable expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/services/VideoDownloadService.kt:102:63 Unresolved reference: CHANNEL_DOWNLOAD
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/MainActivity.kt:60:22 Unresolved reference: splashFragment
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/explore/ExploreViewModel.kt:35:75 Unresolved reference: getRecentSearches
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/explore/ExploreViewModel.kt:71:35 Type mismatch: inferred type is Unit but Author was expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/explore/ExploreViewModel.kt:71:54 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun SeriesEntity.toDomain(): Series defined in com.shortreels.data.repository in file Repositories.kt
+public fun UserEntity.toDomain(): User defined in com.shortreels.data.repository in file Repositories.kt
+public fun VideoEntity.toDomain(): com.shortreels.data.models.Video defined in com.shortreels.data.repository in file VideoRepository.kt
+public fun VideoEntity.toDomain(): com.shortreels.domain.model.Video defined in com.shortreels.data.repository in file Repositories.kt
+public fun AuthorDto.toDomain(): Author defined in com.shortreels.data.repository in file VideoRepository.kt
+public fun PipedTrendingResponse.toDomain(): com.shortreels.data.models.Video defined in com.shortreels.data.repository in file PipedMappers.kt
+public fun com.shortreels.data.remote.dto.VideoDto.toDomain(): com.shortreels.data.models.Video defined in com.shortreels.data.repository in file VideoRepository.kt
+public fun SeriesDto.toDomain(): Series defined in com.shortreels.data.repository in file Repositories.kt
+public fun UserDto.toDomain(): User defined in com.shortreels.data.repository in file Repositories.kt
+public fun com.shortreels.data.remote.models.VideoDto.toDomain(): com.shortreels.domain.model.Video defined in com.shortreels.data.repository in file Repositories.kt
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/explore/ExploreViewModel.kt:75:38 Unresolved reference: insert
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/explore/ExploreViewModel.kt:116:50 Unresolved reference: deleteQuery
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/explore/ExploreViewModel.kt:132:52 Type mismatch: inferred type is Video but Author was expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/explore/ExploreViewModel.kt:132:61 Too many arguments for public fun VideoDto.toDomain(): Video defined in com.shortreels.data.repository in file VideoRepository.kt
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/feed/CommentsViewModel.kt:31:69 Unresolved reference: toDomain
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/feed/FeedViewModel.kt:46:29 Unresolved reference: getForYouFeed
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/feed/FeedViewModel.kt:46:65 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/feed/FeedViewModel.kt:50:34 One type argument expected. Use 'Success<*>' if you don't want to pass type arguments
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/feed/FeedViewModel.kt:55:30 One type argument expected. Use 'Success<*>' if you don't want to pass type arguments
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/feed/FeedViewModel.kt:63:29 Unresolved reference: getFollowingFeed
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/feed/FeedViewModel.kt:64:41 Unresolved reference: it
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/feed/FeedViewModel.kt:65:21 Unresolved reference: it
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/feed/FeedViewModel.kt:65:27 One type argument expected. Use 'Success<*>' if you don't want to pass type arguments
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/feed/FeedViewModel.kt:73:29 Unresolved reference: getTrendingFeed
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/feed/FeedViewModel.kt:74:40 Unresolved reference: it
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/feed/FeedViewModel.kt:75:21 Unresolved reference: it
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/feed/FeedViewModel.kt:75:27 One type argument expected. Use 'Success<*>' if you don't want to pass type arguments
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/feed/FeedViewModel.kt:115:53 Type mismatch: inferred type is Video but String was expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/feed/FeedViewModel.kt:115:53 No value passed for parameter 'isLiked'
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/feed/FeedViewModel.kt:117:36 Type mismatch: inferred type is Unit but Video was expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/feed/FeedViewModel.kt:125:33 Unresolved reference: unsaveVideo
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/feed/FeedViewModel.kt:127:33 Unresolved reference: saveVideo
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/feed/FeedViewModel.kt:135:29 Unresolved reference: recordView
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/player/PlayerFragment.kt:40:36 Unresolved reference: getOrCreatePlayer
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/player/PlayerFragment.kt:71:39 Unresolved reference: getOrCreatePlayer
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/player/PlayerFragmentArgs.kt:5:12 Redeclaration: PlayerFragmentArgs
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/ui/player/VideoPlayerManager.kt:102:21 Type mismatch: inferred type is DataSource but CacheDataSource was expected
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/utils/AppLogger.kt:5:8 Redeclaration: AppLogger
+e: file:///C:/Users/usuario/Downloads/ShortReels/app/src/main/java/com/shortreels/utils/Utils.kt:26:8 Redeclaration: AppLogger
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileReleaseKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 6s
+35 actionable tasks: 2 executed, 33 up-to-date

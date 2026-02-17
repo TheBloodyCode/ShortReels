@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="accent_cyan">#00E5FF</color>
+    <color name="accent_gold">#FFD700</color>
+    <color name="accent_green">#00E676</color>
+    <color name="accent_primary">#FF3C6E</color>
+    <color name="accent_purple">#9B5DFF</color>
+    <color name="accent_secondary">#FF8C42</color>
+    <color name="badge_bg">#FF3C6E</color>
+    <color name="bg_card">#1A1A26</color>
+    <color name="bg_primary">#0A0A0F</color>
+    <color name="bg_secondary">#12121A</color>
+    <color name="bg_surface">#1E1E2E</color>
+    <color name="black">#000000</color>
+    <color name="border_subtle">#14142A</color>
+    <color name="divider">#1A1A2E</color>
+    <color name="error">#FF3C6E</color>
+    <color name="icon_active">#FF3C6E</color>
+    <color name="icon_inactive">#606080</color>
+    <color name="icon_white">#FFFFFF</color>
+    <color name="info">#00E5FF</color>
+    <color name="overlay_dark">#CC0A0A0F</color>
+    <color name="overlay_gradient_end">#F00A0A0F</color>
+    <color name="overlay_gradient_start">#000A0A0F</color>
+    <color name="premium_gold">#FFD700</color>
+    <color name="premium_gold_dark">#CC9900</color>
+    <color name="scrim">#80000000</color>
+    <color name="success">#00E676</color>
+    <color name="tab_selected">#FF3C6E</color>
+    <color name="tab_unselected">#606080</color>
+    <color name="text_hint">#404060</color>
+    <color name="text_muted">#606080</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B0B0C8</color>
+    <color name="transparent">#00000000</color>
+    <color name="warning">#FFD700</color>
+    <color name="white">#FFFFFF</color>
+    <dimen name="action_btn_size">52dp</dimen>
+    <dimen name="action_btn_size_sm">44dp</dimen>
+    <dimen name="avatar_size_lg">56dp</dimen>
+    <dimen name="avatar_size_md">44dp</dimen>
+    <dimen name="avatar_size_sm">32dp</dimen>
+    <dimen name="avatar_size_xl">80dp</dimen>
+    <dimen name="bottom_nav_height">68dp</dimen>
+    <dimen name="card_corner_radius">16dp</dimen>
+    <dimen name="card_corner_radius_large">24dp</dimen>
+    <dimen name="card_corner_radius_small">8dp</dimen>
+    <dimen name="episode_list_thumb_height">70dp</dimen>
+    <dimen name="episode_list_thumb_width">100dp</dimen>
+    <dimen name="explore_banner_height">200dp</dimen>
+    <dimen name="icon_size_lg">32dp</dimen>
+    <dimen name="icon_size_md">24dp</dimen>
+    <dimen name="icon_size_sm">18dp</dimen>
+    <dimen name="padding_lg">24dp</dimen>
+    <dimen name="padding_md">16dp</dimen>
+    <dimen name="padding_sm">8dp</dimen>
+    <dimen name="padding_xl">32dp</dimen>
+    <dimen name="padding_xs">4dp</dimen>
+    <dimen name="series_card_height">190dp</dimen>
+    <dimen name="series_card_wide_height">140dp</dimen>
+    <dimen name="series_card_wide_width">240dp</dimen>
+    <dimen name="series_card_width">130dp</dimen>
+    <dimen name="text_2xl">24sp</dimen>
+    <dimen name="text_3xl">32sp</dimen>
+    <dimen name="text_lg">17sp</dimen>
+    <dimen name="text_md">15sp</dimen>
+    <dimen name="text_sm">13sp</dimen>
+    <dimen name="text_xl">20sp</dimen>
+    <dimen name="text_xs">11sp</dimen>
+    <dimen name="top_bar_height">56dp</dimen>
+    <string name="add_comment">Añade un comentario...</string>
+    <string name="add_to_list">Añadir a mi lista</string>
+    <string name="app_name">ShortReels</string>
+    <string name="app_tagline">Short Dramas, Big Emotions</string>
+    <string name="be_first_comment">¡Sé el primero en comentar!</string>
+    <string name="btn_forgot_password">Forgot Password?</string>
+    <string name="btn_google_login">Continue with Google</string>
+    <string name="btn_login">Log In</string>
+    <string name="buy_coins">Comprar Monedas</string>
+    <string name="coins">Monedas</string>
+    <string name="comment">Comentar</string>
+    <string name="comments_title">Comentarios</string>
+    <string name="confirm_password_hint">Confirmar contraseña</string>
+    <string name="continue_watching">Continuar</string>
+    <string name="continue_with_google">Continuar con Google</string>
+    <string name="continue_with_phone">Continuar con teléfono</string>
+    <string name="download">Descargar</string>
+    <string name="edit_profile">Editar Perfil</string>
+    <string name="email_hint">Correo electrónico</string>
+    <string name="empty_feed">¡No hay videos aún!</string>
+    <string name="empty_history">Sin historial de visualización</string>
+    <string name="empty_notifications">No hay notificaciones</string>
+    <string name="empty_search">No se encontraron resultados</string>
+    <string name="episode">EP</string>
+    <string name="episodes">Episodios</string>
+    <string name="error_network">Sin conexión a internet</string>
+    <string name="error_server">Error del servidor. Intenta de nuevo</string>
+    <string name="error_unknown">Algo salió mal</string>
+    <string name="follow">Seguir</string>
+    <string name="followers">Seguidores</string>
+    <string name="following">Siguiendo</string>
+    <string name="following_btn">Siguiendo</string>
+    <string name="for_you">Para Ti</string>
+    <string name="forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="genres">Géneros</string>
+    <string name="get_started">Comenzar</string>
+    <string name="go_premium">Ir a Premium</string>
+    <string name="have_account">¿Ya tienes cuenta?</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="like">Me gusta</string>
+    <string name="likes_received">Me gustas</string>
+    <string name="load_more">Ver más</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="login_subtitle">Sign in to continue</string>
+    <string name="login_title">Welcome Back</string>
+    <string name="logout">Cerrar Sesión</string>
+    <string name="my_list">Mi Lista</string>
+    <string name="nav_explore">Explorar</string>
+    <string name="nav_home">Inicio</string>
+    <string name="nav_notifications">Notificaciones</string>
+    <string name="nav_profile">Perfil</string>
+    <string name="nav_upload">Subir</string>
+    <string name="new_episodes">Nuevos Episodios</string>
+    <string name="new_releases">Nuevos Lanzamientos</string>
+    <string name="next">Siguiente</string>
+    <string name="no_account">¿No tienes cuenta?</string>
+    <string name="notif_channel_name">ShortReels Notificaciones</string>
+    <string name="notif_new_episode">Nuevo episodio disponible</string>
+    <string name="notif_playback_channel">Reproducción de Video</string>
+    <string name="onboarding_desc_1">Miles de series cortas al alcance de tu mano</string>
+    <string name="onboarding_desc_2">Nuevos episodios cada día. Nunca te quedes sin contenido</string>
+    <string name="onboarding_desc_3">Conéctate con fans de todo el mundo</string>
+    <string name="onboarding_title_1">Drama sin límites</string>
+    <string name="onboarding_title_2">Siempre actualizado</string>
+    <string name="onboarding_title_3">Comparte la emoción</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="premium_content">Contenido Premium</string>
+    <string name="premium_monthly">Plan Mensual</string>
+    <string name="premium_subtitle">Accede a todo el contenido sin límites</string>
+    <string name="premium_title">ShortReels Premium</string>
+    <string name="premium_yearly">Plan Anual</string>
+    <string name="register">Registrarse</string>
+    <string name="replies">respuestas</string>
+    <string name="reply">Responder</string>
+    <string name="retry">Reintentar</string>
+    <string name="save">Guardar</string>
+    <string name="search_hint">Buscar series, actores, géneros...</string>
+    <string name="season">Temporada</string>
+    <string name="settings">Configuración</string>
+    <string name="share">Compartir</string>
+    <string name="skip">Omitir</string>
+    <string name="terms_agree">Al registrarte, aceptas nuestros Términos y Política de Privacidad</string>
+    <string name="top_series">Series Top</string>
+    <string name="trending">Tendencia</string>
+    <string name="trending_now">Tendencia Ahora</string>
+    <string name="tv_no_account">Don\'t have an account? Sign up</string>
+    <string name="unlock_episode">Desbloquear Episodio</string>
+    <string name="username_hint">Nombre de usuario</string>
+    <string name="videos_count">Videos</string>
+    <string name="watch_history">Historial</string>
+    <string name="watch_now">Ver Ahora</string>
+    <style name="Button.ShortReels.Ghost" parent="Widget.ShortReels.Button.Ghost"/>
+    <style name="Button.ShortReels.Primary" parent="Widget.ShortReels.Button.Primary"/>
+    <style name="Button.ShortReels.Secondary" parent="Widget.ShortReels.Button.Secondary"/>
+    <style name="ShapeAppearance.ShortReels.BottomSheet" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">24dp</item>
+        <item name="cornerSizeTopRight">24dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+    <style name="ShapeAppearance.ShortReels.Large" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
+    <style name="ShapeAppearance.ShortReels.Medium" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+    <style name="ShapeAppearance.ShortReels.Small" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+    <style name="TextStyle.ShortReels.Body" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:fontFamily">@font/outfit_regular</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+    <style name="TextStyle.ShortReels.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:fontFamily">@font/outfit_regular</item>
+        <item name="android:textColor">@color/text_muted</item>
+    </style>
+    <style name="TextStyle.ShortReels.Display" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:fontFamily">@font/bebas_neue</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+    <style name="TextStyle.ShortReels.Headline" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:fontFamily">@font/outfit_bold</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+    <style name="TextStyle.ShortReels.TabText" parent="TextAppearance.Design.Tab">
+        <item name="android:fontFamily">@font/outfit_semibold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="textAllCaps">false</item>
+    </style>
+    <style name="Theme.ShortReels" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/accent_primary</item>
+        <item name="colorPrimaryVariant">@color/accent_purple</item>
+        <item name="colorOnPrimary">@color/text_primary</item>
+        <item name="colorSecondary">@color/accent_secondary</item>
+        <item name="colorOnSecondary">@color/text_primary</item>
+        <item name="colorSurface">@color/bg_card</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="android:colorBackground">@color/bg_primary</item>
+        <item name="colorOnBackground">@color/text_primary</item>
+        <item name="colorError">@color/error</item>
+        <item name="android:windowBackground">@color/bg_primary</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/bg_primary</item>
+        <item name="android:windowLightNavigationBar" ns1:targetApi="27">false</item>
+        <item name="bottomSheetDialogTheme">@style/Theme.ShortReels.BottomSheet</item>
+        <item name="materialAlertDialogTheme">@style/Theme.ShortReels.Dialog</item>
+        <item name="android:fontFamily">@font/outfit_regular</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.ShortReels.Large</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.ShortReels.Medium</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.ShortReels.Small</item>
+    </style>
+    <style name="Theme.ShortReels.BottomSheet" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/Widget.ShortReels.BottomSheet</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="colorSurface">@color/bg_secondary</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+    </style>
+    <style name="Theme.ShortReels.Dialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorSurface">@color/bg_card</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorPrimary">@color/accent_primary</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.ShortReels.Medium</item>
+    </style>
+    <style name="Theme.ShortReels.Player" parent="Theme.ShortReels">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/bg_primary</item>
+    </style>
+    <style name="Theme.ShortReels.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/bg_primary</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo</item>
+        <item name="windowSplashScreenAnimationDuration">1000</item>
+        <item name="postSplashScreenTheme">@style/Theme.ShortReels</item>
+    </style>
+    <style name="Widget.ShortReels.BottomNavIndicator" parent="">
+        <item name="android:background">@drawable/btn_primary_bg</item>
+    </style>
+    <style name="Widget.ShortReels.BottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearance">@style/ShapeAppearance.ShortReels.BottomSheet</item>
+        <item name="backgroundTint">@color/bg_secondary</item>
+    </style>
+    <style name="Widget.ShortReels.Button.Ghost" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:fontFamily">@font/outfit_medium</item>
+        <item name="rippleColor">@color/border_subtle</item>
+        <item name="elevation">0dp</item>
+    </style>
+    <style name="Widget.ShortReels.Button.Primary" parent="Widget.MaterialComponents.Button">
+        <item name="android:background">@drawable/btn_primary_bg</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">@font/outfit_semibold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="rippleColor">@color/scrim</item>
+        <item name="elevation">0dp</item>
+    </style>
+    <style name="Widget.ShortReels.Button.Secondary" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">@color/accent_primary</item>
+        <item name="strokeColor">@color/accent_primary</item>
+        <item name="strokeWidth">1.5dp</item>
+        <item name="android:fontFamily">@font/outfit_semibold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="rippleColor">@color/border_subtle</item>
+        <item name="elevation">0dp</item>
+    </style>
+    <style name="Widget.ShortReels.TabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabTextColor">@color/tab_unselected</item>
+        <item name="tabSelectedTextColor">@color/tab_selected</item>
+        <item name="tabIndicatorColor">@color/accent_primary</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabBackground">@android:color/transparent</item>
+        <item name="tabTextAppearance">@style/TextStyle.ShortReels.TabText</item>
+    </style>
+    <style name="Widget.ShortReels.TextInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/bg_card</item>
+        <item name="boxStrokeColor">@color/border_subtle</item>
+        <item name="boxStrokeColor">@color/text_input_stroke</item>
+        <item name="hintTextColor">@color/text_muted</item>
+        <item name="android:textColorHint">@color/text_muted</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+    </style>
+    <style name="Widget.ShortReels.TextInputLayout" parent="Widget.ShortReels.TextInput"/>
+    <declare-styleable name="BadgeView">
+        <attr format="string" name="badgeText"/>
+        <attr format="color" name="badgeColor"/>
+        <attr format="color" name="badgeTextColor"/>
+    </declare-styleable>
+    <declare-styleable name="GradientTextView">
+        <attr format="color" name="gradientStartColor"/>
+        <attr format="color" name="gradientEndColor"/>
+        <attr format="float" name="gradientAngle"/>
+    </declare-styleable>
+    <declare-styleable name="VideoPlayerView">
+        <attr format="boolean" name="autoPlay"/>
+        <attr format="boolean" name="looping"/>
+        <attr format="boolean" name="muted"/>
+        <attr format="boolean" name="showControls"/>
+    </declare-styleable>
+</resources>

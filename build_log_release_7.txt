@@ -1,0 +1,79 @@
+Configuration on demand is an incubating feature.
+
+> Configure project :app
+WARNING: The option setting 'android.defaults.buildfeatures.buildconfig=true' is deprecated.
+The current default is 'false'.
+It will be removed in version 9.0 of the Android Gradle plugin.
+You can resolve this warning in Android Studio via `Refactor` > `Migrate BuildConfig to Gradle Build Files`
+
+> Task :app:buildKotlinToolingMetadata UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :app:dataBindingMergeDependencyArtifactsRelease UP-TO-DATE
+> Task :app:generateReleaseResValues UP-TO-DATE
+> Task :app:generateReleaseResources UP-TO-DATE
+> Task :app:mergeReleaseResources UP-TO-DATE
+> Task :app:packageReleaseResources UP-TO-DATE
+> Task :app:parseReleaseLocalResources UP-TO-DATE
+> Task :app:dataBindingGenBaseClassesRelease UP-TO-DATE
+> Task :app:generateReleaseBuildConfig UP-TO-DATE
+> Task :app:generateSafeArgsRelease UP-TO-DATE
+> Task :app:checkReleaseAarMetadata UP-TO-DATE
+> Task :app:mapReleaseSourceSetPaths UP-TO-DATE
+> Task :app:createReleaseCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksRelease UP-TO-DATE
+> Task :app:processReleaseMainManifest UP-TO-DATE
+> Task :app:processReleaseManifest UP-TO-DATE
+> Task :app:processReleaseManifestForPackage UP-TO-DATE
+> Task :app:processReleaseResources UP-TO-DATE
+> Task :app:kaptGenerateStubsReleaseKotlin UP-TO-DATE
+> Task :app:javaPreCompileRelease UP-TO-DATE
+> Task :app:extractProguardFiles UP-TO-DATE
+> Task :app:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :app:mergeReleaseNativeLibs NO-SOURCE
+> Task :app:stripReleaseDebugSymbols NO-SOURCE
+> Task :app:extractReleaseNativeSymbolTables NO-SOURCE
+> Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:checkReleaseDuplicateClasses UP-TO-DATE
+> Task :app:mergeReleaseArtProfile UP-TO-DATE
+> Task :app:mergeReleaseShaders UP-TO-DATE
+> Task :app:compileReleaseShaders NO-SOURCE
+> Task :app:generateReleaseAssets UP-TO-DATE
+> Task :app:mergeReleaseAssets UP-TO-DATE
+> Task :app:compressReleaseAssets UP-TO-DATE
+> Task :app:optimizeReleaseResources UP-TO-DATE
+> Task :app:collectReleaseDependencies UP-TO-DATE
+> Task :app:sdkReleaseDependencyData UP-TO-DATE
+> Task :app:validateSigningRelease UP-TO-DATE
+> Task :app:writeReleaseAppMetadata UP-TO-DATE
+> Task :app:writeReleaseSigningConfigVersions UP-TO-DATE
+
+> Task :app:kaptReleaseKotlin
+C:\Users\usuario\Downloads\ShortReels\app\build\tmp\kapt3\stubs\release\com\shortreels\data\local\ShortReelsDatabase.java:17: error: cannot find symbol
+@androidx.room.Database(entities = {com.shortreels.data.local.entities.VideoEntity.class, SeriesEntity.class, com.shortreels.data.local.entities.UserEntity.class, CommentEntity.class, com.shortreels.data.local.entities.WatchHistoryEntity.class, com.shortreels.data.local.entities.DownloadEntity.class, com.shortreels.data.local.entities.SearchHistoryEntity.class}, version = 1, exportSchema = true)
+                                                                                          ^
+  symbol: class SeriesEntity
+C:\Users\usuario\Downloads\ShortReels\app\build\tmp\kapt3\stubs\release\com\shortreels\data\local\ShortReelsDatabase.java:17: error: cannot find symbol
+@androidx.room.Database(entities = {com.shortreels.data.local.entities.VideoEntity.class, SeriesEntity.class, com.shortreels.data.local.entities.UserEntity.class, CommentEntity.class, com.shortreels.data.local.entities.WatchHistoryEntity.class, com.shortreels.data.local.entities.DownloadEntity.class, com.shortreels.data.local.entities.SearchHistoryEntity.class}, version = 1, exportSchema = true)
+                                                                                                                                                                   ^
+  symbol: class CommentEntity
+error: [MissingType]: Element 'com.shortreels.data.local.ShortReelsDatabase' references a type that is not present
+
+> Task :app:kaptReleaseKotlin FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:kaptReleaseKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.gradle.internal.KaptWithoutKotlincTask$KaptExecutionWorkAction
+   > java.lang.reflect.InvocationTargetException (no error message)
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 5s
+34 actionable tasks: 2 executed, 32 up-to-date

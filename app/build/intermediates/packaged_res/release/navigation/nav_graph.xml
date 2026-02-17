@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/feedFragment">
+
+    <!-- Feed (home) -->
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="com.shortreels.presentation.ui.feed.FeedFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_feed">
+
+        <action
+            android:id="@+id/action_feed_to_player"
+            app:destination="@id/playerFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_down" />
+    </fragment>
+
+    <!-- Player -->
+    <fragment
+        android:id="@+id/playerFragment"
+        android:name="com.shortreels.presentation.ui.player.PlayerFragment"
+        android:label="Player"
+        tools:layout="@layout/fragment_player">
+
+        <argument
+            android:name="videoId"
+            app:argType="string" />
+        <argument
+            android:name="seriesId"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+
+    <!-- Explore -->
+    <fragment
+        android:id="@+id/exploreFragment"
+        android:name="com.shortreels.presentation.ui.explore.ExploreFragment"
+        android:label="Explorar"
+        tools:layout="@layout/fragment_explore">
+
+        <action
+            android:id="@+id/action_explore_to_series"
+            app:destination="@id/seriesDetailFragment" />
+        <action
+            android:id="@+id/action_explore_to_player"
+            app:destination="@id/playerFragment" />
+    </fragment>
+
+    <!-- Series Detail -->
+    <fragment
+        android:id="@+id/seriesDetailFragment"
+        android:name="com.shortreels.presentation.ui.series.SeriesDetailFragment"
+        android:label="Serie">
+
+        <argument
+            android:name="seriesId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_seriesDetailFragment_to_playerFragment"
+            app:destination="@id/playerFragment" />
+    </fragment>
+
+    <!-- Upload -->
+    <fragment
+        android:id="@+id/uploadFragment"
+        android:name="com.shortreels.presentation.ui.upload.UploadFragment"
+        android:label="Subir"
+        tools:layout="@layout/fragment_upload">
+    </fragment>
+
+    <!-- Library -->
+    <fragment
+        android:id="@+id/libraryFragment"
+        android:name="com.shortreels.presentation.ui.library.LibraryFragment"
+        android:label="Biblioteca"
+        tools:layout="@layout/fragment_library" />
+
+    <!-- Notifications -->
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.shortreels.presentation.ui.notifications.NotificationsFragment"
+        android:label="Notificaciones"
+        tools:layout="@layout/fragment_notifications" />
+
+    <!-- Profile -->
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.shortreels.presentation.ui.profile.ProfileFragment"
+        android:label="Perfil"
+        tools:layout="@layout/fragment_profile">
+        <argument
+            android:name="userId"
+            app:argType="string"
+            android:defaultValue="" />
+        <action
+            android:id="@+id/action_profile_to_premium"
+            app:destination="@id/premiumFragment" />
+        <action
+            android:id="@+id/action_profile_to_settings"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_profile_to_auth"
+            app:destination="@id/authFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Settings -->
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.shortreels.presentation.ui.profile.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <!-- Auth -->
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.shortreels.presentation.ui.auth.AuthFragment"
+        android:label="Autenticación"
+        tools:layout="@layout/fragment_auth">
+        <action
+            android:id="@+id/action_auth_to_home"
+            app:destination="@id/feedFragment"
+            app:popUpTo="@id/authFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Premium -->
+    <fragment
+        android:id="@+id/premiumFragment"
+        android:name="com.shortreels.presentation.ui.premium.PremiumFragment"
+        android:label="Premium"
+        tools:layout="@layout/fragment_premium" />
+
+    <!-- Onboarding -->
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.shortreels.presentation.ui.onboarding.OnboardingFragment"
+        android:label="Bienvenida" />
+
+</navigation>

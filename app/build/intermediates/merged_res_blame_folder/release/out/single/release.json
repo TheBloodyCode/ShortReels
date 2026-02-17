@@ -1,0 +1,498 @@
+[
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_avatar_placeholder.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/avatar_placeholder.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/anim_slide_out_right.xml.flat",
+        "source": "com.shortreels.app-main-89:/anim/slide_out_right.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_mute.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_mute.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_fragment_login.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/fragment_login.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_bg_bottom_nav.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/bg_bottom_nav.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_unmute.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_unmute.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_bookmark_outline.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_bookmark_outline.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_badge_genre_bg.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/badge_genre_bg.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/color_bottom_nav_item_color.xml.flat",
+        "source": "com.shortreels.app-main-89:/color/bottom_nav_item_color.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/xml_network_security_config.xml.flat",
+        "source": "com.shortreels.app-main-89:/xml/network_security_config.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/mipmap-xxxhdpi_ic_launcher.xml.flat",
+        "source": "com.shortreels.app-main-89:/mipmap-xxxhdpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/mipmap-xhdpi_ic_launcher.xml.flat",
+        "source": "com.shortreels.app-main-89:/mipmap-xhdpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/mipmap-xhdpi_ic_launcher_round.xml.flat",
+        "source": "com.shortreels.app-main-89:/mipmap-xhdpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_bookmark_filled.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_bookmark_filled.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/anim_slide_in_right.xml.flat",
+        "source": "com.shortreels.app-main-89:/anim/slide_in_right.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_item_genre_chip.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/item_genre_chip.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/xml_file_paths.xml.flat",
+        "source": "com.shortreels.app-main-89:/xml/file_paths.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_close.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_close.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_item_comment.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/item_comment.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/font_outfit_semibold.xml.flat",
+        "source": "com.shortreels.app-main-89:/font/outfit_semibold.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_comment.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_comment.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_settings.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_settings.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/xml_data_extraction_rules.xml.flat",
+        "source": "com.shortreels.app-main-89:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_empty_feed.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_empty_feed.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_pause.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_pause.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_search_bar_bg.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/search_bar_bg.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_progress_bar_custom.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/progress_bar_custom.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_heart.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_heart.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_item_series_card.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/item_series_card.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_gradient_bottom_overlay.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/gradient_bottom_overlay.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/anim_fade_out.xml.flat",
+        "source": "com.shortreels.app-main-89:/anim/fade_out.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_heart_filled.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_heart_filled.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_item_video_search.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/item_video_search.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_placeholder_avatar.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/placeholder_avatar.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/font_outfit_bold.xml.flat",
+        "source": "com.shortreels.app-main-89:/font/outfit_bold.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_download.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_download.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/anim_slide_down.xml.flat",
+        "source": "com.shortreels.app-main-89:/anim/slide_down.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/anim_fade_in.xml.flat",
+        "source": "com.shortreels.app-main-89:/anim/fade_in.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/navigation_nav_graph.xml.flat",
+        "source": "com.shortreels.app-main-89:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.shortreels.app-main-89:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/anim_slide_in_left.xml.flat",
+        "source": "com.shortreels.app-main-89:/anim/slide_in_left.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_fragment_series_detail.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/fragment_series_detail.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_send.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_send.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_bg_chip_unselected.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/bg_chip_unselected.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_fragment_premium.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/fragment_premium.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_item_video_feed.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/item_video_feed.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_gradient_premium_header.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/gradient_premium_header.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/navigation_auth_nav.xml.flat",
+        "source": "com.shortreels.app-main-89:/navigation/auth_nav.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/mipmap-xxhdpi_ic_launcher.xml.flat",
+        "source": "com.shortreels.app-main-89:/mipmap-xxhdpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_btn_primary_bg.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/btn_primary_bg.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/color_selector_input_stroke.xml.flat",
+        "source": "com.shortreels.app-main-89:/color/selector_input_stroke.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_item_series_grid.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/item_series_grid.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_bottom_nav_bg.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/bottom_nav_bg.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_item_genre_card.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/item_genre_card.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/color_chip_bg_selector.xml.flat",
+        "source": "com.shortreels.app-main-89:/color/chip_bg_selector.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_library.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_library.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_gradient_top.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/gradient_top.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_profile.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_profile.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_item_episode.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/item_episode.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_add_circle.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_add_circle.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_add.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_add.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/mipmap-hdpi_ic_launcher.xml.flat",
+        "source": "com.shortreels.app-main-89:/mipmap-hdpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_fragment_upload.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/fragment_upload.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_premium.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_premium.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/mipmap-xxhdpi_ic_launcher_round.xml.flat",
+        "source": "com.shortreels.app-main-89:/mipmap-xxhdpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_verified.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_verified.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/color_selector_chip_text.xml.flat",
+        "source": "com.shortreels.app-main-89:/color/selector_chip_text.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_fragment_register.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/fragment_register.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/color_selector_chip_stroke.xml.flat",
+        "source": "com.shortreels.app-main-89:/color/selector_chip_stroke.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_bg_chip_selected.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/bg_chip_selected.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_heart_outline.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_heart_outline.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/anim_slide_out_left.xml.flat",
+        "source": "com.shortreels.app-main-89:/anim/slide_out_left.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/mipmap-xxxhdpi_ic_launcher_round.xml.flat",
+        "source": "com.shortreels.app-main-89:/mipmap-xxxhdpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_activity_main.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_wifi_off.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_wifi_off.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_fragment_feed.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/fragment_feed.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_fragment_profile.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/mipmap-hdpi_ic_launcher_round.xml.flat",
+        "source": "com.shortreels.app-main-89:/mipmap-hdpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_bottom_sheet_comments.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/bottom_sheet_comments.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_fragment_notifications.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/fragment_notifications.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_volume_off.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_volume_off.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_fragment_library.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/fragment_library.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_back.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_back.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_plus_circle.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_plus_circle.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_upload.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_upload.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_splash_logo.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_splash_logo.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_explore.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_explore.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/xml_backup_rules.xml.flat",
+        "source": "com.shortreels.app-main-89:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_default_banner.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/default_banner.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/color_text_input_stroke.xml.flat",
+        "source": "com.shortreels.app-main-89:/color/text_input_stroke.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/anim_slide_up.xml.flat",
+        "source": "com.shortreels.app-main-89:/anim/slide_up.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_fragment_onboarding.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/fragment_onboarding.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_eye.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_eye.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_item_shimmer_feed.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/item_shimmer_feed.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_dot_separator.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/dot_separator.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_notifications.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_notifications.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_bottom_sheet_handle.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/bottom_sheet_handle.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_home.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_home.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/font_outfit_regular.xml.flat",
+        "source": "com.shortreels.app-main-89:/font/outfit_regular.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_fragment_explore.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/fragment_explore.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_placeholder_series.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/placeholder_series.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_bg_circle_dark.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/bg_circle_dark.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_activity_auth.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/activity_auth.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/color_selector_chip_bg.xml.flat",
+        "source": "com.shortreels.app-main-89:/color/selector_chip_bg.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_gradient_top_overlay.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/gradient_top_overlay.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_comment_input_bg.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/comment_input_bg.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_bg_badge_premium.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/bg_badge_premium.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_placeholder_thumbnail.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/placeholder_thumbnail.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_auth_bg_gradient.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/auth_bg_gradient.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_play.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_play.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_share.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_share.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_fragment_auth.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/fragment_auth.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_fragment_player.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/fragment_player.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_bookmark.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_bookmark.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_volume_on.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_volume_on.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/color_selector_nav_item.xml.flat",
+        "source": "com.shortreels.app-main-89:/color/selector_nav_item.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_gradient_bottom.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/gradient_bottom.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/font_outfit_medium.xml.flat",
+        "source": "com.shortreels.app-main-89:/font/outfit_medium.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/font_bebas_neue.xml.flat",
+        "source": "com.shortreels.app-main-89:/font/bebas_neue.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/layout_fragment_settings.xml.flat",
+        "source": "com.shortreels.app-main-89:/layout/fragment_settings.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_lock.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_lock.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_ic_search.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/ic_search.xml"
+    },
+    {
+        "merged": "com.shortreels.app-merged_res-88:/drawable_coin_badge_bg.xml.flat",
+        "source": "com.shortreels.app-main-89:/drawable/coin_badge_bg.xml"
+    }
+]

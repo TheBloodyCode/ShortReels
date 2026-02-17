@@ -1,0 +1,825 @@
+package com.shortreels;
+
+import android.app.Activity;
+import android.app.Service;
+import android.view.View;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.SavedStateHandle;
+import androidx.lifecycle.ViewModel;
+import androidx.media3.datasource.DataSource;
+import androidx.media3.datasource.cache.Cache;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableSet;
+import com.google.errorprone.annotations.CanIgnoreReturnValue;
+import com.shortreels.data.local.ShortReelsDatabase;
+import com.shortreels.data.local.dao.SeriesDao;
+import com.shortreels.data.local.dao.UserDao;
+import com.shortreels.data.local.dao.VideoDao;
+import com.shortreels.data.remote.api.ExtractorApi;
+import com.shortreels.data.remote.api.ShortReelsApiService;
+import com.shortreels.data.repository.AuthRepository;
+import com.shortreels.data.repository.SeriesRepository;
+import com.shortreels.data.repository.SessionManager;
+import com.shortreels.data.repository.TokenManager;
+import com.shortreels.data.repository.VideoRepository;
+import com.shortreels.di.DatabaseModule_ProvideDatabaseFactory;
+import com.shortreels.di.DatabaseModule_ProvideSeriesDaoFactory;
+import com.shortreels.di.DatabaseModule_ProvideUserDaoFactory;
+import com.shortreels.di.DatabaseModule_ProvideVideoDaoFactory;
+import com.shortreels.di.NetworkModule_ProvideApiServiceFactory;
+import com.shortreels.di.NetworkModule_ProvideExtractorApiFactory;
+import com.shortreels.di.NetworkModule_ProvideOkHttpClientFactory;
+import com.shortreels.di.NetworkModule_ProvideRetrofitFactory;
+import com.shortreels.di.NetworkModule_ProvideSessionManagerFactory;
+import com.shortreels.di.NetworkModule_ProvideTokenManagerFactory;
+import com.shortreels.di.RepositoryModule_ProvideAuthRepositoryFactory;
+import com.shortreels.di.RepositoryModule_ProvideSeriesRepositoryFactory;
+import com.shortreels.di.RepositoryModule_ProvideVideoRepositoryFactory;
+import com.shortreels.di.VideoModule_ProvideDataSourceFactoryFactory;
+import com.shortreels.di.VideoModule_ProvideExoPlayerBuilderFactory;
+import com.shortreels.di.VideoModule_ProvideVideoCacheFactory;
+import com.shortreels.presentation.ui.MainActivity;
+import com.shortreels.presentation.ui.auth.AuthActivity;
+import com.shortreels.presentation.ui.auth.AuthFragment;
+import com.shortreels.presentation.ui.auth.LoginFragment;
+import com.shortreels.presentation.ui.auth.RegisterFragment;
+import com.shortreels.presentation.ui.explore.ExploreFragment;
+import com.shortreels.presentation.ui.feed.CommentsBottomSheet;
+import com.shortreels.presentation.ui.feed.FeedFragment;
+import com.shortreels.presentation.ui.library.LibraryFragment;
+import com.shortreels.presentation.ui.notifications.NotificationsFragment;
+import com.shortreels.presentation.ui.onboarding.OnboardingFragment;
+import com.shortreels.presentation.ui.player.PlayerFragment;
+import com.shortreels.presentation.ui.player.PlayerFragment_MembersInjector;
+import com.shortreels.presentation.ui.player.VideoPlayerManager;
+import com.shortreels.presentation.ui.premium.PremiumFragment;
+import com.shortreels.presentation.ui.profile.ProfileFragment;
+import com.shortreels.presentation.ui.profile.SettingsFragment;
+import com.shortreels.presentation.ui.series.SeriesDetailFragment;
+import com.shortreels.presentation.ui.splash.SplashActivity;
+import com.shortreels.presentation.ui.upload.UploadFragment;
+import com.shortreels.presentation.viewmodel.AuthViewModel;
+import com.shortreels.presentation.viewmodel.AuthViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.shortreels.presentation.viewmodel.ExploreViewModel;
+import com.shortreels.presentation.viewmodel.ExploreViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.shortreels.presentation.viewmodel.FeedViewModel;
+import com.shortreels.presentation.viewmodel.FeedViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.shortreels.presentation.viewmodel.PlayerViewModel;
+import com.shortreels.presentation.viewmodel.PlayerViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.shortreels.services.VideoPlaybackService;
+import dagger.hilt.android.ActivityRetainedLifecycle;
+import dagger.hilt.android.ViewModelLifecycle;
+import dagger.hilt.android.internal.builders.ActivityComponentBuilder;
+import dagger.hilt.android.internal.builders.ActivityRetainedComponentBuilder;
+import dagger.hilt.android.internal.builders.FragmentComponentBuilder;
+import dagger.hilt.android.internal.builders.ServiceComponentBuilder;
+import dagger.hilt.android.internal.builders.ViewComponentBuilder;
+import dagger.hilt.android.internal.builders.ViewModelComponentBuilder;
+import dagger.hilt.android.internal.builders.ViewWithFragmentComponentBuilder;
+import dagger.hilt.android.internal.lifecycle.DefaultViewModelFactories;
+import dagger.hilt.android.internal.lifecycle.DefaultViewModelFactories_InternalFactoryFactory_Factory;
+import dagger.hilt.android.internal.managers.ActivityRetainedComponentManager_LifecycleModule_ProvideActivityRetainedLifecycleFactory;
+import dagger.hilt.android.internal.managers.SavedStateHandleHolder;
+import dagger.hilt.android.internal.modules.ApplicationContextModule;
+import dagger.hilt.android.internal.modules.ApplicationContextModule_ProvideContextFactory;
+import dagger.internal.DaggerGenerated;
+import dagger.internal.DoubleCheck;
+import dagger.internal.Preconditions;
+import dagger.internal.Provider;
+import java.util.Map;
+import java.util.Set;
+import javax.annotation.processing.Generated;
+import okhttp3.OkHttpClient;
+import retrofit2.Retrofit;
+
+@DaggerGenerated
+@Generated(
+    value = "dagger.internal.codegen.ComponentProcessor",
+    comments = "https://dagger.dev"
+)
+@SuppressWarnings({
+    "unchecked",
+    "rawtypes",
+    "KotlinInternal",
+    "KotlinInternalInJava"
+})
+public final class DaggerShortReelsApp_HiltComponents_SingletonC {
+  private DaggerShortReelsApp_HiltComponents_SingletonC() {
+  }
+
+  public static Builder builder() {
+    return new Builder();
+  }
+
+  public static final class Builder {
+    private ApplicationContextModule applicationContextModule;
+
+    private Builder() {
+    }
+
+    public Builder applicationContextModule(ApplicationContextModule applicationContextModule) {
+      this.applicationContextModule = Preconditions.checkNotNull(applicationContextModule);
+      return this;
+    }
+
+    public ShortReelsApp_HiltComponents.SingletonC build() {
+      Preconditions.checkBuilderRequirement(applicationContextModule, ApplicationContextModule.class);
+      return new SingletonCImpl(applicationContextModule);
+    }
+  }
+
+  private static final class ActivityRetainedCBuilder implements ShortReelsApp_HiltComponents.ActivityRetainedC.Builder {
+    private final SingletonCImpl singletonCImpl;
+
+    private SavedStateHandleHolder savedStateHandleHolder;
+
+    private ActivityRetainedCBuilder(SingletonCImpl singletonCImpl) {
+      this.singletonCImpl = singletonCImpl;
+    }
+
+    @Override
+    public ActivityRetainedCBuilder savedStateHandleHolder(
+        SavedStateHandleHolder savedStateHandleHolder) {
+      this.savedStateHandleHolder = Preconditions.checkNotNull(savedStateHandleHolder);
+      return this;
+    }
+
+    @Override
+    public ShortReelsApp_HiltComponents.ActivityRetainedC build() {
+      Preconditions.checkBuilderRequirement(savedStateHandleHolder, SavedStateHandleHolder.class);
+      return new ActivityRetainedCImpl(singletonCImpl, savedStateHandleHolder);
+    }
+  }
+
+  private static final class ActivityCBuilder implements ShortReelsApp_HiltComponents.ActivityC.Builder {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private Activity activity;
+
+    private ActivityCBuilder(SingletonCImpl singletonCImpl,
+        ActivityRetainedCImpl activityRetainedCImpl) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+    }
+
+    @Override
+    public ActivityCBuilder activity(Activity activity) {
+      this.activity = Preconditions.checkNotNull(activity);
+      return this;
+    }
+
+    @Override
+    public ShortReelsApp_HiltComponents.ActivityC build() {
+      Preconditions.checkBuilderRequirement(activity, Activity.class);
+      return new ActivityCImpl(singletonCImpl, activityRetainedCImpl, activity);
+    }
+  }
+
+  private static final class FragmentCBuilder implements ShortReelsApp_HiltComponents.FragmentC.Builder {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private final ActivityCImpl activityCImpl;
+
+    private Fragment fragment;
+
+    private FragmentCBuilder(SingletonCImpl singletonCImpl,
+        ActivityRetainedCImpl activityRetainedCImpl, ActivityCImpl activityCImpl) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+      this.activityCImpl = activityCImpl;
+    }
+
+    @Override
+    public FragmentCBuilder fragment(Fragment fragment) {
+      this.fragment = Preconditions.checkNotNull(fragment);
+      return this;
+    }
+
+    @Override
+    public ShortReelsApp_HiltComponents.FragmentC build() {
+      Preconditions.checkBuilderRequirement(fragment, Fragment.class);
+      return new FragmentCImpl(singletonCImpl, activityRetainedCImpl, activityCImpl, fragment);
+    }
+  }
+
+  private static final class ViewWithFragmentCBuilder implements ShortReelsApp_HiltComponents.ViewWithFragmentC.Builder {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private final ActivityCImpl activityCImpl;
+
+    private final FragmentCImpl fragmentCImpl;
+
+    private View view;
+
+    private ViewWithFragmentCBuilder(SingletonCImpl singletonCImpl,
+        ActivityRetainedCImpl activityRetainedCImpl, ActivityCImpl activityCImpl,
+        FragmentCImpl fragmentCImpl) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+      this.activityCImpl = activityCImpl;
+      this.fragmentCImpl = fragmentCImpl;
+    }
+
+    @Override
+    public ViewWithFragmentCBuilder view(View view) {
+      this.view = Preconditions.checkNotNull(view);
+      return this;
+    }
+
+    @Override
+    public ShortReelsApp_HiltComponents.ViewWithFragmentC build() {
+      Preconditions.checkBuilderRequirement(view, View.class);
+      return new ViewWithFragmentCImpl(singletonCImpl, activityRetainedCImpl, activityCImpl, fragmentCImpl, view);
+    }
+  }
+
+  private static final class ViewCBuilder implements ShortReelsApp_HiltComponents.ViewC.Builder {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private final ActivityCImpl activityCImpl;
+
+    private View view;
+
+    private ViewCBuilder(SingletonCImpl singletonCImpl, ActivityRetainedCImpl activityRetainedCImpl,
+        ActivityCImpl activityCImpl) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+      this.activityCImpl = activityCImpl;
+    }
+
+    @Override
+    public ViewCBuilder view(View view) {
+      this.view = Preconditions.checkNotNull(view);
+      return this;
+    }
+
+    @Override
+    public ShortReelsApp_HiltComponents.ViewC build() {
+      Preconditions.checkBuilderRequirement(view, View.class);
+      return new ViewCImpl(singletonCImpl, activityRetainedCImpl, activityCImpl, view);
+    }
+  }
+
+  private static final class ViewModelCBuilder implements ShortReelsApp_HiltComponents.ViewModelC.Builder {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private SavedStateHandle savedStateHandle;
+
+    private ViewModelLifecycle viewModelLifecycle;
+
+    private ViewModelCBuilder(SingletonCImpl singletonCImpl,
+        ActivityRetainedCImpl activityRetainedCImpl) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+    }
+
+    @Override
+    public ViewModelCBuilder savedStateHandle(SavedStateHandle handle) {
+      this.savedStateHandle = Preconditions.checkNotNull(handle);
+      return this;
+    }
+
+    @Override
+    public ViewModelCBuilder viewModelLifecycle(ViewModelLifecycle viewModelLifecycle) {
+      this.viewModelLifecycle = Preconditions.checkNotNull(viewModelLifecycle);
+      return this;
+    }
+
+    @Override
+    public ShortReelsApp_HiltComponents.ViewModelC build() {
+      Preconditions.checkBuilderRequirement(savedStateHandle, SavedStateHandle.class);
+      Preconditions.checkBuilderRequirement(viewModelLifecycle, ViewModelLifecycle.class);
+      return new ViewModelCImpl(singletonCImpl, activityRetainedCImpl, savedStateHandle, viewModelLifecycle);
+    }
+  }
+
+  private static final class ServiceCBuilder implements ShortReelsApp_HiltComponents.ServiceC.Builder {
+    private final SingletonCImpl singletonCImpl;
+
+    private Service service;
+
+    private ServiceCBuilder(SingletonCImpl singletonCImpl) {
+      this.singletonCImpl = singletonCImpl;
+    }
+
+    @Override
+    public ServiceCBuilder service(Service service) {
+      this.service = Preconditions.checkNotNull(service);
+      return this;
+    }
+
+    @Override
+    public ShortReelsApp_HiltComponents.ServiceC build() {
+      Preconditions.checkBuilderRequirement(service, Service.class);
+      return new ServiceCImpl(singletonCImpl, service);
+    }
+  }
+
+  private static final class ViewWithFragmentCImpl extends ShortReelsApp_HiltComponents.ViewWithFragmentC {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private final ActivityCImpl activityCImpl;
+
+    private final FragmentCImpl fragmentCImpl;
+
+    private final ViewWithFragmentCImpl viewWithFragmentCImpl = this;
+
+    private ViewWithFragmentCImpl(SingletonCImpl singletonCImpl,
+        ActivityRetainedCImpl activityRetainedCImpl, ActivityCImpl activityCImpl,
+        FragmentCImpl fragmentCImpl, View viewParam) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+      this.activityCImpl = activityCImpl;
+      this.fragmentCImpl = fragmentCImpl;
+
+
+    }
+  }
+
+  private static final class FragmentCImpl extends ShortReelsApp_HiltComponents.FragmentC {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private final ActivityCImpl activityCImpl;
+
+    private final FragmentCImpl fragmentCImpl = this;
+
+    private FragmentCImpl(SingletonCImpl singletonCImpl,
+        ActivityRetainedCImpl activityRetainedCImpl, ActivityCImpl activityCImpl,
+        Fragment fragmentParam) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+      this.activityCImpl = activityCImpl;
+
+
+    }
+
+    @Override
+    public void injectAuthFragment(AuthFragment authFragment) {
+    }
+
+    @Override
+    public void injectLoginFragment(LoginFragment loginFragment) {
+    }
+
+    @Override
+    public void injectRegisterFragment(RegisterFragment registerFragment) {
+    }
+
+    @Override
+    public void injectExploreFragment(ExploreFragment exploreFragment) {
+    }
+
+    @Override
+    public void injectCommentsBottomSheet(CommentsBottomSheet commentsBottomSheet) {
+    }
+
+    @Override
+    public void injectFeedFragment(FeedFragment feedFragment) {
+    }
+
+    @Override
+    public void injectLibraryFragment(LibraryFragment libraryFragment) {
+    }
+
+    @Override
+    public void injectNotificationsFragment(NotificationsFragment notificationsFragment) {
+    }
+
+    @Override
+    public void injectOnboardingFragment(OnboardingFragment onboardingFragment) {
+    }
+
+    @Override
+    public void injectPlayerFragment(PlayerFragment playerFragment) {
+      injectPlayerFragment2(playerFragment);
+    }
+
+    @Override
+    public void injectPremiumFragment(PremiumFragment premiumFragment) {
+    }
+
+    @Override
+    public void injectProfileFragment(ProfileFragment profileFragment) {
+    }
+
+    @Override
+    public void injectSettingsFragment(SettingsFragment settingsFragment) {
+    }
+
+    @Override
+    public void injectSeriesDetailFragment(SeriesDetailFragment seriesDetailFragment) {
+    }
+
+    @Override
+    public void injectUploadFragment(UploadFragment uploadFragment) {
+    }
+
+    @Override
+    public DefaultViewModelFactories.InternalFactoryFactory getHiltInternalFactoryFactory() {
+      return activityCImpl.getHiltInternalFactoryFactory();
+    }
+
+    @Override
+    public ViewWithFragmentComponentBuilder viewWithFragmentComponentBuilder() {
+      return new ViewWithFragmentCBuilder(singletonCImpl, activityRetainedCImpl, activityCImpl, fragmentCImpl);
+    }
+
+    @CanIgnoreReturnValue
+    private PlayerFragment injectPlayerFragment2(PlayerFragment instance) {
+      PlayerFragment_MembersInjector.injectPlayerManager(instance, singletonCImpl.videoPlayerManagerProvider.get());
+      return instance;
+    }
+  }
+
+  private static final class ViewCImpl extends ShortReelsApp_HiltComponents.ViewC {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private final ActivityCImpl activityCImpl;
+
+    private final ViewCImpl viewCImpl = this;
+
+    private ViewCImpl(SingletonCImpl singletonCImpl, ActivityRetainedCImpl activityRetainedCImpl,
+        ActivityCImpl activityCImpl, View viewParam) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+      this.activityCImpl = activityCImpl;
+
+
+    }
+  }
+
+  private static final class ActivityCImpl extends ShortReelsApp_HiltComponents.ActivityC {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private final ActivityCImpl activityCImpl = this;
+
+    private ActivityCImpl(SingletonCImpl singletonCImpl,
+        ActivityRetainedCImpl activityRetainedCImpl, Activity activityParam) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+
+
+    }
+
+    @Override
+    public void injectMainActivity(MainActivity mainActivity) {
+    }
+
+    @Override
+    public void injectAuthActivity(AuthActivity authActivity) {
+    }
+
+    @Override
+    public void injectSplashActivity(SplashActivity splashActivity) {
+    }
+
+    @Override
+    public DefaultViewModelFactories.InternalFactoryFactory getHiltInternalFactoryFactory() {
+      return DefaultViewModelFactories_InternalFactoryFactory_Factory.newInstance(getViewModelKeys(), new ViewModelCBuilder(singletonCImpl, activityRetainedCImpl));
+    }
+
+    @Override
+    public Set<String> getViewModelKeys() {
+      return ImmutableSet.<String>of(AuthViewModel_HiltModules_KeyModule_ProvideFactory.provide(), ExploreViewModel_HiltModules_KeyModule_ProvideFactory.provide(), FeedViewModel_HiltModules_KeyModule_ProvideFactory.provide(), PlayerViewModel_HiltModules_KeyModule_ProvideFactory.provide());
+    }
+
+    @Override
+    public ViewModelComponentBuilder getViewModelComponentBuilder() {
+      return new ViewModelCBuilder(singletonCImpl, activityRetainedCImpl);
+    }
+
+    @Override
+    public FragmentComponentBuilder fragmentComponentBuilder() {
+      return new FragmentCBuilder(singletonCImpl, activityRetainedCImpl, activityCImpl);
+    }
+
+    @Override
+    public ViewComponentBuilder viewComponentBuilder() {
+      return new ViewCBuilder(singletonCImpl, activityRetainedCImpl, activityCImpl);
+    }
+  }
+
+  private static final class ViewModelCImpl extends ShortReelsApp_HiltComponents.ViewModelC {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private final ViewModelCImpl viewModelCImpl = this;
+
+    private Provider<AuthViewModel> authViewModelProvider;
+
+    private Provider<ExploreViewModel> exploreViewModelProvider;
+
+    private Provider<FeedViewModel> feedViewModelProvider;
+
+    private Provider<PlayerViewModel> playerViewModelProvider;
+
+    private ViewModelCImpl(SingletonCImpl singletonCImpl,
+        ActivityRetainedCImpl activityRetainedCImpl, SavedStateHandle savedStateHandleParam,
+        ViewModelLifecycle viewModelLifecycleParam) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+
+      initialize(savedStateHandleParam, viewModelLifecycleParam);
+
+    }
+
+    @SuppressWarnings("unchecked")
+    private void initialize(final SavedStateHandle savedStateHandleParam,
+        final ViewModelLifecycle viewModelLifecycleParam) {
+      this.authViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 0);
+      this.exploreViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 1);
+      this.feedViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
+      this.playerViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 3);
+    }
+
+    @Override
+    public Map<String, javax.inject.Provider<ViewModel>> getHiltViewModelMap() {
+      return ImmutableMap.<String, javax.inject.Provider<ViewModel>>of("com.shortreels.presentation.viewmodel.AuthViewModel", ((Provider) authViewModelProvider), "com.shortreels.presentation.viewmodel.ExploreViewModel", ((Provider) exploreViewModelProvider), "com.shortreels.presentation.viewmodel.FeedViewModel", ((Provider) feedViewModelProvider), "com.shortreels.presentation.viewmodel.PlayerViewModel", ((Provider) playerViewModelProvider));
+    }
+
+    @Override
+    public Map<String, Object> getHiltViewModelAssistedMap() {
+      return ImmutableMap.<String, Object>of();
+    }
+
+    private static final class SwitchingProvider<T> implements Provider<T> {
+      private final SingletonCImpl singletonCImpl;
+
+      private final ActivityRetainedCImpl activityRetainedCImpl;
+
+      private final ViewModelCImpl viewModelCImpl;
+
+      private final int id;
+
+      SwitchingProvider(SingletonCImpl singletonCImpl, ActivityRetainedCImpl activityRetainedCImpl,
+          ViewModelCImpl viewModelCImpl, int id) {
+        this.singletonCImpl = singletonCImpl;
+        this.activityRetainedCImpl = activityRetainedCImpl;
+        this.viewModelCImpl = viewModelCImpl;
+        this.id = id;
+      }
+
+      @SuppressWarnings("unchecked")
+      @Override
+      public T get() {
+        switch (id) {
+          case 0: // com.shortreels.presentation.viewmodel.AuthViewModel 
+          return (T) new AuthViewModel(singletonCImpl.provideAuthRepositoryProvider.get());
+
+          case 1: // com.shortreels.presentation.viewmodel.ExploreViewModel 
+          return (T) new ExploreViewModel(singletonCImpl.provideVideoRepositoryProvider.get(), singletonCImpl.provideSeriesRepositoryProvider.get());
+
+          case 2: // com.shortreels.presentation.viewmodel.FeedViewModel 
+          return (T) new FeedViewModel(singletonCImpl.provideVideoRepositoryProvider.get());
+
+          case 3: // com.shortreels.presentation.viewmodel.PlayerViewModel 
+          return (T) new PlayerViewModel(singletonCImpl.provideVideoRepositoryProvider.get());
+
+          default: throw new AssertionError(id);
+        }
+      }
+    }
+  }
+
+  private static final class ActivityRetainedCImpl extends ShortReelsApp_HiltComponents.ActivityRetainedC {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl = this;
+
+    private Provider<ActivityRetainedLifecycle> provideActivityRetainedLifecycleProvider;
+
+    private ActivityRetainedCImpl(SingletonCImpl singletonCImpl,
+        SavedStateHandleHolder savedStateHandleHolderParam) {
+      this.singletonCImpl = singletonCImpl;
+
+      initialize(savedStateHandleHolderParam);
+
+    }
+
+    @SuppressWarnings("unchecked")
+    private void initialize(final SavedStateHandleHolder savedStateHandleHolderParam) {
+      this.provideActivityRetainedLifecycleProvider = DoubleCheck.provider(new SwitchingProvider<ActivityRetainedLifecycle>(singletonCImpl, activityRetainedCImpl, 0));
+    }
+
+    @Override
+    public ActivityComponentBuilder activityComponentBuilder() {
+      return new ActivityCBuilder(singletonCImpl, activityRetainedCImpl);
+    }
+
+    @Override
+    public ActivityRetainedLifecycle getActivityRetainedLifecycle() {
+      return provideActivityRetainedLifecycleProvider.get();
+    }
+
+    private static final class SwitchingProvider<T> implements Provider<T> {
+      private final SingletonCImpl singletonCImpl;
+
+      private final ActivityRetainedCImpl activityRetainedCImpl;
+
+      private final int id;
+
+      SwitchingProvider(SingletonCImpl singletonCImpl, ActivityRetainedCImpl activityRetainedCImpl,
+          int id) {
+        this.singletonCImpl = singletonCImpl;
+        this.activityRetainedCImpl = activityRetainedCImpl;
+        this.id = id;
+      }
+
+      @SuppressWarnings("unchecked")
+      @Override
+      public T get() {
+        switch (id) {
+          case 0: // dagger.hilt.android.ActivityRetainedLifecycle 
+          return (T) ActivityRetainedComponentManager_LifecycleModule_ProvideActivityRetainedLifecycleFactory.provideActivityRetainedLifecycle();
+
+          default: throw new AssertionError(id);
+        }
+      }
+    }
+  }
+
+  private static final class ServiceCImpl extends ShortReelsApp_HiltComponents.ServiceC {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ServiceCImpl serviceCImpl = this;
+
+    private ServiceCImpl(SingletonCImpl singletonCImpl, Service serviceParam) {
+      this.singletonCImpl = singletonCImpl;
+
+
+    }
+
+    @Override
+    public void injectVideoPlaybackService(VideoPlaybackService videoPlaybackService) {
+    }
+  }
+
+  private static final class SingletonCImpl extends ShortReelsApp_HiltComponents.SingletonC {
+    private final ApplicationContextModule applicationContextModule;
+
+    private final SingletonCImpl singletonCImpl = this;
+
+    private Provider<Cache> provideVideoCacheProvider;
+
+    private Provider<DataSource.Factory> provideDataSourceFactoryProvider;
+
+    private Provider<androidx.media3.exoplayer.ExoPlayer.Builder> provideExoPlayerBuilderProvider;
+
+    private Provider<TokenManager> provideTokenManagerProvider;
+
+    private Provider<OkHttpClient> provideOkHttpClientProvider;
+
+    private Provider<ExtractorApi> provideExtractorApiProvider;
+
+    private Provider<VideoPlayerManager> videoPlayerManagerProvider;
+
+    private Provider<Retrofit> provideRetrofitProvider;
+
+    private Provider<ShortReelsApiService> provideApiServiceProvider;
+
+    private Provider<ShortReelsDatabase> provideDatabaseProvider;
+
+    private Provider<SessionManager> provideSessionManagerProvider;
+
+    private Provider<AuthRepository> provideAuthRepositoryProvider;
+
+    private Provider<VideoRepository> provideVideoRepositoryProvider;
+
+    private Provider<SeriesRepository> provideSeriesRepositoryProvider;
+
+    private SingletonCImpl(ApplicationContextModule applicationContextModuleParam) {
+      this.applicationContextModule = applicationContextModuleParam;
+      initialize(applicationContextModuleParam);
+
+    }
+
+    private UserDao userDao() {
+      return DatabaseModule_ProvideUserDaoFactory.provideUserDao(provideDatabaseProvider.get());
+    }
+
+    private VideoDao videoDao() {
+      return DatabaseModule_ProvideVideoDaoFactory.provideVideoDao(provideDatabaseProvider.get());
+    }
+
+    private SeriesDao seriesDao() {
+      return DatabaseModule_ProvideSeriesDaoFactory.provideSeriesDao(provideDatabaseProvider.get());
+    }
+
+    @SuppressWarnings("unchecked")
+    private void initialize(final ApplicationContextModule applicationContextModuleParam) {
+      this.provideVideoCacheProvider = DoubleCheck.provider(new SwitchingProvider<Cache>(singletonCImpl, 3));
+      this.provideDataSourceFactoryProvider = DoubleCheck.provider(new SwitchingProvider<DataSource.Factory>(singletonCImpl, 2));
+      this.provideExoPlayerBuilderProvider = DoubleCheck.provider(new SwitchingProvider<androidx.media3.exoplayer.ExoPlayer.Builder>(singletonCImpl, 1));
+      this.provideTokenManagerProvider = DoubleCheck.provider(new SwitchingProvider<TokenManager>(singletonCImpl, 6));
+      this.provideOkHttpClientProvider = DoubleCheck.provider(new SwitchingProvider<OkHttpClient>(singletonCImpl, 5));
+      this.provideExtractorApiProvider = DoubleCheck.provider(new SwitchingProvider<ExtractorApi>(singletonCImpl, 4));
+      this.videoPlayerManagerProvider = DoubleCheck.provider(new SwitchingProvider<VideoPlayerManager>(singletonCImpl, 0));
+      this.provideRetrofitProvider = DoubleCheck.provider(new SwitchingProvider<Retrofit>(singletonCImpl, 9));
+      this.provideApiServiceProvider = DoubleCheck.provider(new SwitchingProvider<ShortReelsApiService>(singletonCImpl, 8));
+      this.provideDatabaseProvider = DoubleCheck.provider(new SwitchingProvider<ShortReelsDatabase>(singletonCImpl, 10));
+      this.provideSessionManagerProvider = DoubleCheck.provider(new SwitchingProvider<SessionManager>(singletonCImpl, 11));
+      this.provideAuthRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<AuthRepository>(singletonCImpl, 7));
+      this.provideVideoRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<VideoRepository>(singletonCImpl, 12));
+      this.provideSeriesRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<SeriesRepository>(singletonCImpl, 13));
+    }
+
+    @Override
+    public void injectShortReelsApp(ShortReelsApp shortReelsApp) {
+    }
+
+    @Override
+    public Set<Boolean> getDisableFragmentGetContextFix() {
+      return ImmutableSet.<Boolean>of();
+    }
+
+    @Override
+    public ActivityRetainedComponentBuilder retainedComponentBuilder() {
+      return new ActivityRetainedCBuilder(singletonCImpl);
+    }
+
+    @Override
+    public ServiceComponentBuilder serviceComponentBuilder() {
+      return new ServiceCBuilder(singletonCImpl);
+    }
+
+    private static final class SwitchingProvider<T> implements Provider<T> {
+      private final SingletonCImpl singletonCImpl;
+
+      private final int id;
+
+      SwitchingProvider(SingletonCImpl singletonCImpl, int id) {
+        this.singletonCImpl = singletonCImpl;
+        this.id = id;
+      }
+
+      @SuppressWarnings("unchecked")
+      @Override
+      public T get() {
+        switch (id) {
+          case 0: // com.shortreels.presentation.ui.player.VideoPlayerManager 
+          return (T) new VideoPlayerManager(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule), singletonCImpl.provideExoPlayerBuilderProvider.get(), singletonCImpl.provideDataSourceFactoryProvider.get(), singletonCImpl.provideVideoCacheProvider.get(), singletonCImpl.provideExtractorApiProvider);
+
+          case 1: // androidx.media3.exoplayer.ExoPlayer.Builder 
+          return (T) VideoModule_ProvideExoPlayerBuilderFactory.provideExoPlayerBuilder(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule), singletonCImpl.provideDataSourceFactoryProvider.get());
+
+          case 2: // androidx.media3.datasource.DataSource.Factory 
+          return (T) VideoModule_ProvideDataSourceFactoryFactory.provideDataSourceFactory(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule), singletonCImpl.provideVideoCacheProvider.get());
+
+          case 3: // androidx.media3.datasource.cache.Cache 
+          return (T) VideoModule_ProvideVideoCacheFactory.provideVideoCache(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
+
+          case 4: // com.shortreels.data.remote.api.ExtractorApi 
+          return (T) NetworkModule_ProvideExtractorApiFactory.provideExtractorApi(singletonCImpl.provideOkHttpClientProvider.get());
+
+          case 5: // okhttp3.OkHttpClient 
+          return (T) NetworkModule_ProvideOkHttpClientFactory.provideOkHttpClient(singletonCImpl.provideTokenManagerProvider.get());
+
+          case 6: // com.shortreels.data.repository.TokenManager 
+          return (T) NetworkModule_ProvideTokenManagerFactory.provideTokenManager(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
+
+          case 7: // com.shortreels.data.repository.AuthRepository 
+          return (T) RepositoryModule_ProvideAuthRepositoryFactory.provideAuthRepository(singletonCImpl.provideApiServiceProvider.get(), singletonCImpl.userDao(), singletonCImpl.provideTokenManagerProvider.get(), singletonCImpl.provideSessionManagerProvider.get());
+
+          case 8: // com.shortreels.data.remote.api.ShortReelsApiService 
+          return (T) NetworkModule_ProvideApiServiceFactory.provideApiService(singletonCImpl.provideRetrofitProvider.get());
+
+          case 9: // retrofit2.Retrofit 
+          return (T) NetworkModule_ProvideRetrofitFactory.provideRetrofit(singletonCImpl.provideOkHttpClientProvider.get());
+
+          case 10: // com.shortreels.data.local.ShortReelsDatabase 
+          return (T) DatabaseModule_ProvideDatabaseFactory.provideDatabase(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
+
+          case 11: // com.shortreels.data.repository.SessionManager 
+          return (T) NetworkModule_ProvideSessionManagerFactory.provideSessionManager(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
+
+          case 12: // com.shortreels.data.repository.VideoRepository 
+          return (T) RepositoryModule_ProvideVideoRepositoryFactory.provideVideoRepository(singletonCImpl.provideApiServiceProvider.get(), singletonCImpl.videoDao(), singletonCImpl.provideTokenManagerProvider.get());
+
+          case 13: // com.shortreels.data.repository.SeriesRepository 
+          return (T) RepositoryModule_ProvideSeriesRepositoryFactory.provideSeriesRepository(singletonCImpl.provideApiServiceProvider.get(), singletonCImpl.seriesDao(), singletonCImpl.provideTokenManagerProvider.get());
+
+          default: throw new AssertionError(id);
+        }
+      }
+    }
+  }
+}

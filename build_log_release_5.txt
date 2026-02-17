@@ -1,0 +1,78 @@
+Configuration on demand is an incubating feature.
+
+> Configure project :app
+WARNING: The option setting 'android.defaults.buildfeatures.buildconfig=true' is deprecated.
+The current default is 'false'.
+It will be removed in version 9.0 of the Android Gradle plugin.
+You can resolve this warning in Android Studio via `Refactor` > `Migrate BuildConfig to Gradle Build Files`
+
+> Task :app:buildKotlinToolingMetadata UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :app:dataBindingMergeDependencyArtifactsRelease UP-TO-DATE
+> Task :app:generateReleaseResValues UP-TO-DATE
+> Task :app:generateReleaseResources UP-TO-DATE
+> Task :app:mergeReleaseResources UP-TO-DATE
+> Task :app:packageReleaseResources UP-TO-DATE
+> Task :app:parseReleaseLocalResources UP-TO-DATE
+> Task :app:dataBindingGenBaseClassesRelease UP-TO-DATE
+> Task :app:generateReleaseBuildConfig UP-TO-DATE
+> Task :app:generateSafeArgsRelease UP-TO-DATE
+> Task :app:checkReleaseAarMetadata UP-TO-DATE
+> Task :app:mapReleaseSourceSetPaths UP-TO-DATE
+> Task :app:createReleaseCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksRelease UP-TO-DATE
+> Task :app:processReleaseMainManifest UP-TO-DATE
+> Task :app:processReleaseManifest UP-TO-DATE
+> Task :app:processReleaseManifestForPackage UP-TO-DATE
+> Task :app:javaPreCompileRelease UP-TO-DATE
+> Task :app:extractProguardFiles UP-TO-DATE
+> Task :app:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :app:mergeReleaseNativeLibs NO-SOURCE
+> Task :app:stripReleaseDebugSymbols NO-SOURCE
+> Task :app:extractReleaseNativeSymbolTables NO-SOURCE
+> Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:checkReleaseDuplicateClasses UP-TO-DATE
+> Task :app:mergeReleaseArtProfile UP-TO-DATE
+> Task :app:mergeReleaseShaders UP-TO-DATE
+> Task :app:compileReleaseShaders NO-SOURCE
+> Task :app:generateReleaseAssets UP-TO-DATE
+> Task :app:mergeReleaseAssets UP-TO-DATE
+> Task :app:compressReleaseAssets UP-TO-DATE
+> Task :app:collectReleaseDependencies UP-TO-DATE
+> Task :app:sdkReleaseDependencyData UP-TO-DATE
+> Task :app:validateSigningRelease UP-TO-DATE
+> Task :app:writeReleaseAppMetadata UP-TO-DATE
+> Task :app:writeReleaseSigningConfigVersions UP-TO-DATE
+> Task :app:processReleaseResources FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:processReleaseResources'.
+> A failure occurred while executing com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction
+   > Android resource linking failed
+     com.shortreels.app-mergeReleaseResources-86:/layout/fragment_auth.xml:97: error: resource style/Widget.ShortReels.TextInputLayout (aka com.shortreels:style/Widget.ShortReels.TextInputLayout) not found.
+     com.shortreels.app-mergeReleaseResources-86:/layout/fragment_auth.xml:114: error: resource style/Widget.ShortReels.TextInputLayout (aka com.shortreels:style/Widget.ShortReels.TextInputLayout) not found.
+     com.shortreels.app-mergeReleaseResources-86:/layout/fragment_auth.xml:130: error: resource style/Widget.ShortReels.TextInputLayout (aka com.shortreels:style/Widget.ShortReels.TextInputLayout) not found.
+     com.shortreels.app-mergeReleaseResources-86:/layout/fragment_auth.xml:148: error: resource style/Widget.ShortReels.TextInputLayout (aka com.shortreels:style/Widget.ShortReels.TextInputLayout) not found.
+     com.shortreels.app-mergeReleaseResources-86:/layout/fragment_auth.xml:174: error: resource style/Button.ShortReels.Primary (aka com.shortreels:style/Button.ShortReels.Primary) not found.
+     com.shortreels.app-mergeReleaseResources-86:/layout/fragment_auth.xml:198: error: resource style/Button.ShortReels.Ghost (aka com.shortreels:style/Button.ShortReels.Ghost) not found.
+     com.shortreels.app-mergeReleaseResources-86:/layout/fragment_auth.xml:208: error: resource style/Button.ShortReels.Ghost (aka com.shortreels:style/Button.ShortReels.Ghost) not found.
+     com.shortreels.app-mergeReleaseResources-86:/layout/fragment_profile.xml:176: error: resource style/Button.ShortReels.Secondary (aka com.shortreels:style/Button.ShortReels.Secondary) not found.
+     com.shortreels.app-mergeReleaseResources-86:/layout/fragment_profile.xml:184: error: resource style/Button.ShortReels.Primary (aka com.shortreels:style/Button.ShortReels.Primary) not found.
+     com.shortreels.app-mergeReleaseResources-86:/layout/fragment_profile.xml:209: error: resource style/Button.ShortReels.Ghost (aka com.shortreels:style/Button.ShortReels.Ghost) not found.
+     com.shortreels.app-mergeReleaseResources-86:/layout/item_video_feed.xml:65: error: resource style/Button.ShortReels.Primary (aka com.shortreels:style/Button.ShortReels.Primary) not found.
+     com.shortreels.app-mergeReleaseResources-86:/layout/item_video_feed.xml:261: error: resource style/Button.ShortReels.Secondary (aka com.shortreels:style/Button.ShortReels.Secondary) not found.
+     error: failed linking file resources.
+
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 2s
+31 actionable tasks: 2 executed, 29 up-to-date

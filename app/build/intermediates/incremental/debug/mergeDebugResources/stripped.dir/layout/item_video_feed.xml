@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- Video surface / Thumbnail -->
+    <ImageView
+        android:id="@+id/iv_thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:contentDescription="Thumbnail" />
+
+    <!-- Video Player Surface -->
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/video_surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:use_controller="false"
+        app:resize_mode="zoom" />
+
+    <!-- Loading Spinner -->
+    <ProgressBar
+        android:id="@+id/loading_spinner"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:indeterminateTint="@color/accent_primary"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Controls Overlay -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/controls_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#40000000"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/btn_play_pause"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_play"
+            app:tint="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/btn_mute"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_unmute"
+            app:tint="@color/white"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Bottom gradient overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@drawable/gradient_bottom_overlay"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Lock overlay for premium content -->
+    <LinearLayout
+        android:id="@+id/lock_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/scrim"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_lock"
+            app:tint="@color/accent_gold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desbloquear Episodio"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:fontFamily="@font/outfit_semibold"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/tv_coins_required"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100 Coins"
+            android:textColor="@color/accent_gold"
+            android:textSize="14sp"
+            android:fontFamily="@font/outfit_bold"
+            android:layout_marginTop="4dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_unlock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🪙 Usar Monedas"
+            style="@style/Widget.ShortReels.Button.Primary"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+
+    <!-- Heart animation overlay -->
+    <ImageView
+        android:id="@+id/iv_heart_animation"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_heart_filled"
+        android:visibility="gone"
+        app:tint="@color/accent_primary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Right action buttons -->
+    <LinearLayout
+        android:id="@+id/actions_container"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Avatar with follow -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="52dp"
+            android:layout_height="60dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_author_avatar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/placeholder_avatar"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/text_primary"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_follow_btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_add_circle"
+                android:background="@color/accent_primary"
+                android:layout_marginTop="-8dp"
+                app:tint="@color/text_primary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Like -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/btn_like"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_heart"
+                app:tint="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/tv_like_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp"
+                android:fontFamily="@font/outfit_semibold"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <!-- Comment -->
+        <LinearLayout
+            android:id="@+id/btn_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:padding="4dp">
+
+            <ImageView
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:src="@drawable/ic_comment"
+                app:tint="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/tv_comment_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp"
+                android:fontFamily="@font/outfit_semibold"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <!-- Share -->
+        <LinearLayout
+            android:id="@+id/btn_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:padding="4dp">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_share"
+                app:tint="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/tv_share_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp"
+                android:fontFamily="@font/outfit_semibold"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <!-- Bookmark -->
+        <ImageView
+            android:id="@+id/btn_bookmark"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_bookmark"
+            android:layout_marginTop="16dp"
+            android:padding="4dp"
+            app:tint="@color/text_primary" />
+
+    </LinearLayout>
+
+    <!-- Bottom info -->
+    <LinearLayout
+        android:id="@+id/info_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/actions_container"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Author row -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_author_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@username"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:fontFamily="@font/outfit_bold" />
+
+            <ImageView
+                android:id="@+id/iv_verified"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_verified"
+                android:layout_marginStart="4dp"
+                android:visibility="gone" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="Seguir"
+                android:textSize="12sp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_marginStart="8dp"
+                style="@style/Widget.ShortReels.Button.Secondary" />
+        </LinearLayout>
+
+        <!-- Episode info -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/tv_episode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EP 1"
+                android:textColor="@color/accent_cyan"
+                android:textSize="12sp"
+                android:fontFamily="@font/outfit_semibold" />
+                
+            <TextView
+                android:text=" • "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_series_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Series Title"
+                android:textColor="@color/accent_cyan"
+                android:textSize="12sp"
+                android:fontFamily="@font/outfit_semibold" />
+        </LinearLayout>
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tv_video_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Video Title"
+            android:textColor="@color/text_primary"
+            android:textSize="17sp"
+            android:fontFamily="@font/outfit_bold"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginTop="2dp" />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description text here"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginTop="4dp" />
+
+        <!-- Tags -->
+        <TextView
+            android:id="@+id/tv_tags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#romance #drama"
+            android:textColor="@color/accent_primary"
+            android:textSize="13sp"
+            android:fontFamily="@font/outfit_medium"
+            android:layout_marginTop="4dp" />
+
+        <!-- Meta row -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="6dp">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/ic_eye"
+                app:tint="@color/text_muted" />
+
+            <TextView
+                android:id="@+id/tv_view_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.2M vistas"
+                android:textColor="@color/text_muted"
+                android:textSize="12sp"
+                android:layout_marginStart="4dp" />
+
+            <!-- Genre badge -->
+            <TextView
+                android:id="@+id/tv_genre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Romance"
+                android:textColor="@color/accent_purple"
+                android:textSize="11sp"
+                android:fontFamily="@font/outfit_semibold"
+                android:background="@drawable/badge_genre_bg"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        
+    </LinearLayout>
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:progressDrawable="@drawable/progress_bar_custom"
+        android:layout_marginBottom="90dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_current_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0:00"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/progress_bar" />
+
+    <TextView
+        android:id="@+id/tv_total_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0:00"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/progress_bar" />
+
+
+    <!-- Premium badge -->
+    <ImageView
+        android:id="@+id/badge_premium"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_premium"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="16dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

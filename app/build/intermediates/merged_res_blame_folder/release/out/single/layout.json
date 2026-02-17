@@ -1,0 +1,106 @@
+[
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/item_video_search.xml",
+        "source": "com.shortreels.app-main-89:/layout/item_video_search.xml"
+    },
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/item_shimmer_feed.xml",
+        "source": "com.shortreels.app-main-89:/layout/item_shimmer_feed.xml"
+    },
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/fragment_settings.xml",
+        "source": "com.shortreels.app-main-89:/layout/fragment_settings.xml"
+    },
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/activity_auth.xml",
+        "source": "com.shortreels.app-main-89:/layout/activity_auth.xml"
+    },
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/fragment_upload.xml",
+        "source": "com.shortreels.app-main-89:/layout/fragment_upload.xml"
+    },
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/fragment_series_detail.xml",
+        "source": "com.shortreels.app-main-89:/layout/fragment_series_detail.xml"
+    },
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/fragment_login.xml",
+        "source": "com.shortreels.app-main-89:/layout/fragment_login.xml"
+    },
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/fragment_register.xml",
+        "source": "com.shortreels.app-main-89:/layout/fragment_register.xml"
+    },
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/item_series_grid.xml",
+        "source": "com.shortreels.app-main-89:/layout/item_series_grid.xml"
+    },
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/activity_main.xml",
+        "source": "com.shortreels.app-main-89:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/fragment_profile.xml",
+        "source": "com.shortreels.app-main-89:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/fragment_feed.xml",
+        "source": "com.shortreels.app-main-89:/layout/fragment_feed.xml"
+    },
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/fragment_auth.xml",
+        "source": "com.shortreels.app-main-89:/layout/fragment_auth.xml"
+    },
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/item_video_feed.xml",
+        "source": "com.shortreels.app-main-89:/layout/item_video_feed.xml"
+    },
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/fragment_premium.xml",
+        "source": "com.shortreels.app-main-89:/layout/fragment_premium.xml"
+    },
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/item_genre_card.xml",
+        "source": "com.shortreels.app-main-89:/layout/item_genre_card.xml"
+    },
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/fragment_player.xml",
+        "source": "com.shortreels.app-main-89:/layout/fragment_player.xml"
+    },
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/fragment_library.xml",
+        "source": "com.shortreels.app-main-89:/layout/fragment_library.xml"
+    },
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/fragment_onboarding.xml",
+        "source": "com.shortreels.app-main-89:/layout/fragment_onboarding.xml"
+    },
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/item_episode.xml",
+        "source": "com.shortreels.app-main-89:/layout/item_episode.xml"
+    },
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/item_series_card.xml",
+        "source": "com.shortreels.app-main-89:/layout/item_series_card.xml"
+    },
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/bottom_sheet_comments.xml",
+        "source": "com.shortreels.app-main-89:/layout/bottom_sheet_comments.xml"
+    },
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/fragment_explore.xml",
+        "source": "com.shortreels.app-main-89:/layout/fragment_explore.xml"
+    },
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/item_comment.xml",
+        "source": "com.shortreels.app-main-89:/layout/item_comment.xml"
+    },
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/item_genre_chip.xml",
+        "source": "com.shortreels.app-main-89:/layout/item_genre_chip.xml"
+    },
+    {
+        "merged": "com.shortreels.app-mergeReleaseResources-87:/layout/fragment_notifications.xml",
+        "source": "com.shortreels.app-main-89:/layout/fragment_notifications.xml"
+    }
+]

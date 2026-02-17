@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ShortReels</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Inicio</string>
+    <string name="nav_explore">Explorar</string>
+    <string name="nav_upload">Subir</string>
+    <string name="nav_notifications">Notificaciones</string>
+    <string name="nav_profile">Perfil</string>
+
+    <!-- Auth -->
+    <string name="login">Iniciar Sesión</string>
+    <string name="register">Registrarse</string>
+    <string name="logout">Cerrar Sesión</string>
+    <string name="email_hint">Correo electrónico</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="username_hint">Nombre de usuario</string>
+    <string name="confirm_password_hint">Confirmar contraseña</string>
+    <string name="forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="no_account">¿No tienes cuenta?</string>
+    <string name="have_account">¿Ya tienes cuenta?</string>
+    <string name="continue_with_google">Continuar con Google</string>
+    <string name="continue_with_phone">Continuar con teléfono</string>
+    <string name="terms_agree">Al registrarte, aceptas nuestros Términos y Política de Privacidad</string>
+
+    <!-- Feed -->
+    <string name="for_you">Para Ti</string>
+    <string name="following">Siguiendo</string>
+    <string name="trending">Tendencia</string>
+    <string name="new_episodes">Nuevos Episodios</string>
+
+    <!-- Video Actions -->
+    <string name="like">Me gusta</string>
+    <string name="comment">Comentar</string>
+    <string name="share">Compartir</string>
+    <string name="save">Guardar</string>
+    <string name="follow">Seguir</string>
+    <string name="following_btn">Siguiendo</string>
+
+    <!-- Series -->
+    <string name="episodes">Episodios</string>
+    <string name="episode">EP</string>
+    <string name="season">Temporada</string>
+    <string name="watch_now">Ver Ahora</string>
+    <string name="continue_watching">Continuar</string>
+    <string name="add_to_list">Añadir a mi lista</string>
+    <string name="download">Descargar</string>
+    <string name="unlock_episode">Desbloquear Episodio</string>
+    <string name="premium_content">Contenido Premium</string>
+
+    <!-- Explore -->
+    <string name="search_hint">Buscar series, actores, géneros...</string>
+    <string name="trending_now">Tendencia Ahora</string>
+    <string name="top_series">Series Top</string>
+    <string name="new_releases">Nuevos Lanzamientos</string>
+    <string name="genres">Géneros</string>
+
+    <!-- Profile -->
+    <string name="edit_profile">Editar Perfil</string>
+    <string name="my_list">Mi Lista</string>
+    <string name="watch_history">Historial</string>
+    <string name="settings">Configuración</string>
+    <string name="followers">Seguidores</string>
+    <string name="likes_received">Me gustas</string>
+    <string name="videos_count">Videos</string>
+
+    <!-- Comments -->
+    <string name="comments_title">Comentarios</string>
+    <string name="add_comment">Añade un comentario...</string>
+    <string name="reply">Responder</string>
+    <string name="replies">respuestas</string>
+    <string name="load_more">Ver más</string>
+    <string name="be_first_comment">¡Sé el primero en comentar!</string>
+
+    <!-- Premium -->
+    <string name="go_premium">Ir a Premium</string>
+    <string name="premium_title">ShortReels Premium</string>
+    <string name="premium_subtitle">Accede a todo el contenido sin límites</string>
+    <string name="premium_monthly">Plan Mensual</string>
+    <string name="premium_yearly">Plan Anual</string>
+    <string name="coins">Monedas</string>
+    <string name="buy_coins">Comprar Monedas</string>
+
+    <!-- Errors -->
+    <string name="error_network">Sin conexión a internet</string>
+    <string name="error_server">Error del servidor. Intenta de nuevo</string>
+    <string name="error_unknown">Algo salió mal</string>
+    <string name="retry">Reintentar</string>
+
+    <!-- Empty states -->
+    <string name="empty_feed">¡No hay videos aún!</string>
+    <string name="empty_notifications">No hay notificaciones</string>
+    <string name="empty_search">No se encontraron resultados</string>
+    <string name="empty_history">Sin historial de visualización</string>
+
+    <!-- Notifications -->
+    <string name="notif_new_episode">Nuevo episodio disponible</string>
+    <string name="notif_channel_name">ShortReels Notificaciones</string>
+    <string name="notif_playback_channel">Reproducción de Video</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_title_1">Drama sin límites</string>
+    <string name="onboarding_desc_1">Miles de series cortas al alcance de tu mano</string>
+    <string name="onboarding_title_2">Siempre actualizado</string>
+    <string name="onboarding_desc_2">Nuevos episodios cada día. Nunca te quedes sin contenido</string>
+    <string name="onboarding_title_3">Comparte la emoción</string>
+    <string name="onboarding_desc_3">Conéctate con fans de todo el mundo</string>
+    <string name="get_started">Comenzar</string>
+    <string name="skip">Omitir</string>
+    <string name="next">Siguiente</string>
+    <string name="app_tagline">Short Dramas, Big Emotions</string>
+    <string name="login_title">Welcome Back</string>
+    <string name="login_subtitle">Sign in to continue</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_forgot_password">Forgot Password?</string>
+    <string name="btn_login">Log In</string>
+    <string name="btn_google_login">Continue with Google</string>
+    <string name="tv_no_account">Don\'t have an account? Sign up</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="VideoPlayerView">
+        <attr name="autoPlay" format="boolean" />
+        <attr name="looping" format="boolean" />
+        <attr name="muted" format="boolean" />
+        <attr name="showControls" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="GradientTextView">
+        <attr name="gradientStartColor" format="color" />
+        <attr name="gradientEndColor" format="color" />
+        <attr name="gradientAngle" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="BadgeView">
+        <attr name="badgeText" format="string" />
+        <attr name="badgeColor" format="color" />
+        <attr name="badgeTextColor" format="color" />
+    </declare-styleable>
+</resources>

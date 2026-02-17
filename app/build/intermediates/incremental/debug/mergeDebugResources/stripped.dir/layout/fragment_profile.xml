@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="100dp">
+
+            <!-- Shimmer placeholder -->
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_profile"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:visibility="gone" />
+
+            <!-- Profile content -->
+            <LinearLayout
+                android:id="@+id/content_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <!-- Header/Banner -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/default_banner"
+                        android:scaleType="centerCrop" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_bottom_overlay" />
+
+                    <!-- Notifications button -->
+                    <ImageView
+                        android:id="@+id/btn_notifications"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_notifications"
+                        android:padding="8dp"
+                        android:layout_gravity="top|start"
+                        android:layout_margin="12dp"
+                        app:tint="@color/text_primary" />
+
+                    <!-- Settings button -->
+                    <ImageView
+                        android:id="@+id/btn_settings"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_settings"
+                        android:padding="8dp"
+                        android:layout_gravity="top|end"
+                        android:layout_margin="12dp"
+                        app:tint="@color/text_primary" />
+                </FrameLayout>
+
+                <!-- Avatar and name -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginTop="-40dp"
+                    android:paddingHorizontal="16dp">
+
+                    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/iv_avatar"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/placeholder_avatar"
+                            app:civ_border_width="3dp"
+                            app:civ_border_color="@color/accent_primary" />
+
+                        <ImageView
+                            android:id="@+id/badge_premium"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_premium"
+                            android:visibility="gone"
+                            android:layout_gravity="bottom|end" />
+                    </FrameLayout>
+
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:layout_marginTop="8dp">
+
+                        <TextView android:id="@+id/tv_display_name"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Display Name" android:textColor="@color/text_primary"
+                            android:textSize="22sp" android:fontFamily="@font/outfit_bold" />
+
+                        <ImageView android:id="@+id/iv_verified"
+                            android:layout_width="18dp" android:layout_height="18dp"
+                            android:src="@drawable/ic_verified" android:layout_marginStart="6dp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <TextView android:id="@+id/tv_username"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@username" android:textColor="@color/text_muted"
+                        android:textSize="14sp" android:layout_marginTop="2dp" />
+
+                    <TextView android:id="@+id/tv_bio"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Bio text here" android:textColor="@color/text_secondary"
+                        android:textSize="14sp" android:gravity="center" android:layout_marginTop="8dp" />
+
+                    <!-- Stats row -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center"
+                        android:layout_marginTop="16dp">
+
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                            <TextView android:id="@+id/tv_videos" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:text="0"
+                                android:textColor="@color/text_primary" android:textSize="18sp"
+                                android:fontFamily="@font/outfit_bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Videos" android:textColor="@color/text_muted" android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <View android:layout_width="1dp" android:layout_height="32dp" android:background="@color/border_subtle" />
+
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                            <TextView android:id="@+id/tv_followers" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:text="0"
+                                android:textColor="@color/text_primary" android:textSize="18sp"
+                                android:fontFamily="@font/outfit_bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Seguidores" android:textColor="@color/text_muted" android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <View android:layout_width="1dp" android:layout_height="32dp" android:background="@color/border_subtle" />
+
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                            <TextView android:id="@+id/tv_following" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:text="0"
+                                android:textColor="@color/text_primary" android:textSize="18sp"
+                                android:fontFamily="@font/outfit_bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Siguiendo" android:textColor="@color/text_muted" android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <View android:layout_width="1dp" android:layout_height="32dp" android:background="@color/border_subtle" />
+
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                            <TextView android:id="@+id/tv_likes" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:text="0"
+                                android:textColor="@color/text_primary" android:textSize="18sp"
+                                android:fontFamily="@font/outfit_bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Me gustas" android:textColor="@color/text_muted" android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Action buttons -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginTop="16dp" android:gravity="center">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_edit_profile"
+                            android:layout_width="0dp" android:layout_height="42dp"
+                            android:layout_weight="1" android:text="Editar Perfil"
+                            style="@style/Button.ShortReels.Secondary"
+                            android:layout_marginEnd="8dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_premium"
+                            android:layout_width="0dp" android:layout_height="42dp"
+                            android:layout_weight="1" android:text="⭐ Premium"
+                            android:backgroundTint="@color/accent_gold"
+                            android:textColor="@color/bg_primary"
+                            style="@style/Button.ShortReels.Primary" />
+                    </LinearLayout>
+
+                    <!-- Coins -->
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/coin_badge_bg" android:paddingHorizontal="12dp"
+                        android:paddingVertical="6dp" android:layout_marginTop="12dp">
+
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="🪙" android:textSize="16sp" />
+
+                        <TextView android:id="@+id/tv_coins"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="0 monedas" android:textColor="@color/accent_gold"
+                            android:textSize="14sp" android:fontFamily="@font/outfit_semibold"
+                            android:layout_marginStart="4dp" />
+                    </LinearLayout>
+
+                    <!-- Logout -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_logout"
+                        android:layout_width="wrap_content" android:layout_height="40dp"
+                        android:text="Cerrar Sesión" android:textColor="@color/error"
+                        android:layout_marginTop="20dp"
+                        style="@style/Button.ShortReels.Ghost" />
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@android:color/transparent"
+                        app:tabTextColor="@color/text_muted"
+                        app:tabSelectedTextColor="@color/white"
+                        app:tabIndicatorColor="@color/accent_primary">
+                        <com.google.android.material.tabs.TabItem android:text="Videos" />
+                        <com.google.android.material.tabs.TabItem android:text="Me Gusta" />
+                        <com.google.android.material.tabs.TabItem android:text="Guardado" />
+                    </com.google.android.material.tabs.TabLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="3" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

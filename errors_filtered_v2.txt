@@ -1,0 +1,5 @@
+﻿
+build_log_final_7.txt:65:FAILURE: Build 
+failed with an exception.
+
+
